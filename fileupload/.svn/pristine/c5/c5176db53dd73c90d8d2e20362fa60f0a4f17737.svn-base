@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>fileupload</display-name>
+	
+	<!-- 上传文件信息配置  start -->
+	<!-- 视频上传的目录配置 临时的  永久的 -->
+	<context-param>
+		<param-name>video_position_temp</param-name>
+		<param-value>/Users/louis/Desktop/video_folder_temp</param-value>
+	</context-param>
+	<context-param>
+		<param-name>video_position_actual</param-name>
+		<param-value>/Users/louis/Desktop/video_folder_actual</param-value>
+	</context-param>
+	<!-- 视频截帧数后图片目录 -->
+	<context-param>
+		<param-name>videoimg_position</param-name>
+		<param-value>/Users/louis/Desktop/videoimg_folder</param-value>
+	</context-param>
+	
+	<!-- 图像上传的目录配置 临时的  永久的 -->
+	<context-param>
+		<param-name>image_position_temp</param-name>
+		<param-value>/Users/louis/Desktop/image_folder_temp</param-value>
+	</context-param>
+	<context-param>
+		<param-name>image_position_actual</param-name>
+		<param-value>/Users/louis/Desktop/image_folder_actual</param-value>
+	</context-param>
+	
+	<!-- 头像临时文件 -->
+	<context-param>
+		<param-name>icon_position_temp</param-name>
+		<param-value>/Users/louis/Desktop/icon_folder_temp</param-value>
+	</context-param>
+	<!-- 头像实际文件位置 -->
+	<context-param>
+		<param-name>icon_position_actual</param-name>
+		<param-value>/Users/louis/Desktop/icon_folder_actual</param-value>
+	</context-param>
+	
+	<!-- 视频保存的缓存区域 单位 mb -->
+	<context-param>
+		<param-name>max_video_size</param-name>
+		<param-value>50</param-value>
+	</context-param>
+	<!-- 图像保存的缓存区域 单位 mb -->
+	<context-param>
+		<param-name>max_image_size</param-name>
+		<param-value>4</param-value>
+	</context-param>
+	<!-- icon保存的缓存区域 单位 mb -->
+	<context-param>
+		<param-name>max_icon_size</param-name>
+		<param-value>1</param-value>
+	</context-param>
+	
+	<!-- 上传文件信息配置  end -->
+
+	<!-- 上传视频的servlet -->
+	<servlet>
+		<servlet-name>vupload</servlet-name>
+		<servlet-class>com.fp.action.UploadVideoServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>vupload</servlet-name>
+		<url-pattern>/vupload.do</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 上传图片的servlet -->
+	<servlet>
+		<servlet-name>iupload</servlet-name>
+		<servlet-class>com.fp.action.UploadImageServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>iupload</servlet-name>
+		<url-pattern>/iupload.do</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 头像上传 servlet -->
+	<servlet>
+		<servlet-name>iconupload</servlet-name>
+		<servlet-class>com.fp.action.UploadIconServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>iconupload</servlet-name>
+		<url-pattern>/iconupload.do</url-pattern>
+	</servlet-mapping>
+
+	<!-- 请求的过滤器 -->
+	<filter>
+		<filter-name>check</filter-name>
+		<filter-class>com.fp.filter.FormValidFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>check</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	
+	<listener>
+		<listener-class>com.fp.listener.StartupPreparingListener</listener-class>
+	</listener>
+
+</web-app>

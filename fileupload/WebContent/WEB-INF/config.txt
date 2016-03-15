@@ -1,0 +1,109 @@
+	<!-- 视频上传的目录配置 临时的  永久的 -->
+	<context-param>
+		<param-name>video_position_temp</param-name>
+		<param-value>/Users/louis/Desktop/video_folder_temp</param-value>
+	</context-param>
+	<context-param>
+		<param-name>video_position_actual</param-name>
+		<param-value>/Users/louis/Desktop/video_folder_actual</param-value>
+	</context-param>
+	<!-- 视频截帧数后图片目录 -->
+	<context-param>
+		<param-name>videoimg_position</param-name>
+		<param-value>/Users/louis/Desktop/videoimg_folder</param-value>
+	</context-param>
+	
+	<!-- 图像上传的目录配置 临时的  永久的 -->
+	<context-param>
+		<param-name>image_position_temp</param-name>
+		<param-value>/Users/louis/Desktop/image_folder_temp</param-value>
+	</context-param>
+	<context-param>
+		<param-name>image_position_actual</param-name>
+		<param-value>/Users/louis/Desktop/image_folder_actual</param-value>
+	</context-param>
+	
+	<!-- 视频保存的缓存区域 单位 mb -->
+	<context-param>
+		<param-name>max_video_size</param-name>
+		<param-value>50</param-value>
+	</context-param>
+	<!-- 图像保存的缓存区域 单位 mb -->
+	<context-param>
+		<param-name>max_image_size</param-name>
+		<param-value>4</param-value>
+	</context-param>
+	
+	<!-- 头像临时文件 -->
+	<context-param>
+		<param-name>icon_position_temp</param-name>
+		<param-value>/Users/louis/Desktop/image_folder_temp</param-value>
+	</context-param>
+	<!-- 头像实际文件位置 -->
+	<context-param>
+		<param-name>icon_position_actual</param-name>
+		<param-value>/Users/louis/Desktop/image_folder_actual</param-value>
+	</context-param>
+	
+	
+	
+	-------------------windows------------------
+	
+	
+	<!-- 上传文件信息配置  start -->
+	<!-- 视频上传的目录配置 临时的  永久的 -->
+	<context-param>
+		<param-name>video_position_temp</param-name>
+		<param-value>D:/wwwroot/video_folder_temp</param-value>
+	</context-param>
+	<context-param>
+		<param-name>video_position_actual</param-name>
+		<param-value>D:/wwwroot/video_folder_actual</param-value>
+	</context-param>
+	<!-- 视频截帧数后图片目录 -->
+	<context-param>
+		<param-name>videoimg_position</param-name>
+		<param-value>D:/wwwroot/videoimg_folder</param-value>
+	</context-param>
+	
+	<!-- 图像上传的目录配置 临时的  永久的 -->
+	<context-param>
+		<param-name>image_position_temp</param-name>
+		<param-value>D:/wwwroot/image_folder_temp</param-value>
+	</context-param>
+	<context-param>
+		<param-name>image_position_actual</param-name>
+		<param-value>D:/wwwroot/image_folder_actual</param-value>
+	</context-param>
+	
+	<!-- 头像临时文件 -->
+	<context-param>
+		<param-name>icon_position_temp</param-name>
+		<param-value>D:/wwwroot/image_folder_temp</param-value>
+	</context-param>
+	<!-- 头像实际文件位置 -->
+	<context-param>
+		<param-name>icon_position_actual</param-name>
+		<param-value>D:/wwwroot/image_folder_actual</param-value>
+	</context-param>
+	
+	<!-- 视频保存的缓存区域 单位 mb -->
+	<context-param>
+		<param-name>max_video_size</param-name>
+		<param-value>50</param-value>
+	</context-param>
+	<!-- 图像保存的缓存区域 单位 mb -->
+	<context-param>
+		<param-name>max_image_size</param-name>
+		<param-value>4</param-value>
+	</context-param>
+	<!-- icon保存的缓存区域 单位 mb -->
+	<context-param>
+		<param-name>max_icon_size</param-name>
+		<param-value>1</param-value>
+	</context-param>
+	
+	<!-- 上传文件信息配置  end -->
+	
+	
+	
