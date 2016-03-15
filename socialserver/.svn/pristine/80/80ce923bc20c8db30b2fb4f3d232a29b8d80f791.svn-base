@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ss.dao.IOrganizationDao">
+	<resultMap id="OrgResultMap" type="com.ss.pojo.Mass_organization">
+		<id column="omuid" property="omuid" jdbcType="INTEGER" />
+		<result column="omuuid" property="omuuid" jdbcType="INTEGER" />
+		<result column="buid" property="buid" jdbcType="INTEGER" />
+		<result column="moname" property="moname" jdbcType="VARCHAR" />
+		<result column="createtime" property="createtime" jdbcType="TIMESTAMP" />
+		<result column="department" property="department" jdbcType="VARCHAR" />
+		<result column="explains" property="explains" jdbcType="VARCHAR" />
+		<result column="ompicture" property="ompicture" jdbcType="VARCHAR" />
+		<result column="verify" property="verify" jdbcType="TINYINT" />
+		<result column="state" property="state" jdbcType="TINYINT" />
+		<result column="omcuid" property="omcuid" jdbcType="INTEGER" />
+		<result column="sid" property="sid" jdbcType="INTEGER" />
+		<result column="delstate" property="delstate" jdbcType="TINYINT" />
+		<result column="attestation" property="attestation" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="Org_Column_List">
+		omuid, omuuid, buid, moname, createtime, department, explains, ompicture,
+		verify,state,omcuid,sid,delstate,attestation
+	</sql>
+	<select id="selectCount" resultType="Integer">
+		select count(0) from mass_organization
+	</select>
+	<select id="selectAllByOrg" resultMap="OrgResultMap"
+		parameterType="com.ss.pojo.Mass_organization">
+		select
+		<include refid="Org_Column_List" />
+		from mass_organization
+		where 
+		<trim  suffix=" " suffixOverrides="and">
+			<if test="buid != null">
+				buid = #{buid,jdbcType=INTEGER} and
+			</if>
+			<if test="omuuid != null">
+				omuuid = #{omuuid,jdbcType=VARCHAR} and
+			</if>
+			<if test="omuid != null">
+				omuid = #{omuid,jdbcType=INTEGER} and
+			</if>
+			<if test="moname != null">
+				moname = #{moname,jdbcType=VARCHAR} and
+			</if>
+			<if test="createtime != null">
+				createtime = #{createtime,jdbcType=TIMESTAMP} and
+			</if>
+			<if test="department != null">
+				department = #{department,jdbcType=VARCHAR} and
+			</if>
+			<if test="explains != null">
+				explains = #{explains,jdbcType=VARCHAR} and
+			</if>
+			<if test="omcuid != null">
+				omcuid = #{omcuid,jdbcType=INTEGER} and
+			</if>
+			<if test="sid != null">
+				sid = #{sid,jdbcType=INTEGER} and
+			</if>
+			<if test="delstate != null">
+				delstate = #{delstate,jdbcType=INTEGER} and
+			</if>
+			<if test="state != null">
+				state = #{state,jdbcType=INTEGER} and
+			</if>
+		</trim>
+		order by omuid limit #{currentPage,jdbcType=INTEGER}, #{number,jdbcType=INTEGER}
+	</select>
+	<select id="selectAllByOrgAndMember" resultMap="OrgResultMap"
+		parameterType="com.ss.pojo.Mass_organization">
+		select
+		b.omuid, b.omuuid, b.buid, b.moname, b.createtime, b.department, b.explains, b.ompicture,b.verify,b.state,b.omcuid,b.sid,b.delstate,b.attestation
+		from group_membership a LEFT JOIN mass_organization b on a.omuid=b.omuid 
+		where
+		<trim  suffix=" " suffixOverrides="and">
+			<if test="buid != null">
+				a.buid = #{buid,jdbcType=INTEGER} and
+			</if>
+			<if test="omuid != null">
+				a.omuid = #{omuid,jdbcType=INTEGER} and
+			</if>
+			<if test="administrator != null">
+				a.administrator = #{administrator,jdbcType=INTEGER} and
+			</if>
+			<if test="mumState != null">
+				a.state = #{mumState,jdbcType=INTEGER} and
+			</if>
+		</trim>
+		order by b.omuid limit #{currentPage,jdbcType=INTEGER}, #{number,jdbcType=INTEGER}
+	</select>
+	<insert id="insertOrg" parameterType="com.ss.pojo.Mass_organization">
+		insert into mass_organization ( omuuid, buid, moname, createtime, 
+		department, explains, ompicture,
+		verify,state,omcuid,sid,delstate,attestation)
+		values (#{omuuid,jdbcType=VARCHAR},
+		#{buid,jdbcType=INTEGER},
+		#{moname,jdbcType=VARCHAR},
+		#{createtime,jdbcType=TIMESTAMP}, 
+		#{department,jdbcType=VARCHAR},
+		#{explains,jdbcType=VARCHAR},
+		#{ompicture,jdbcType=VARCHAR},
+		#{verify,jdbcType=TINYINT},
+		#{state,jdbcType=TINYINT},
+		#{omcuid,jdbcType=INTEGER},
+		#{sid,jdbcType=INTEGER},
+		#{delstate,jdbcType=TINYINT},
+		#{attestation,jdbcType=VARCHAR}
+		)
+		<selectKey resultType="Integer" order="AFTER" keyProperty="omuid">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+	<update id="updateByOmuidSelective" parameterType="com.ss.pojo.Mass_organization">
+		update mass_organization
+		<set>
+			<if test="moname != null">
+				moname = #{moname,jdbcType=VARCHAR},
+			</if>
+			<if test="department != null">
+				department = #{department,jdbcType=VARCHAR},
+			</if>
+			<if test="explains != null">
+				explains = #{explains,jdbcType=VARCHAR},
+			</if>
+			<if test="ompicture != null">
+				ompicture = #{ompicture,jdbcType=VARCHAR},
+			</if>
+			<if test="verify != null">
+				verify = #{verify,jdbcType=TINYINT},
+			</if>
+			<if test="state != null">
+				state = #{state,jdbcType=TINYINT},
+			</if>
+			<if test="omcuid != null">
+				omcuid = #{omcuid,jdbcType=INTEGER},
+			</if>
+			<if test="sid != null">
+				sid = #{sid,jdbcType=INTEGER},
+			</if>
+			<if test="delstate != null">
+				delstate = #{delstate,jdbcType=TINYINT},
+			</if>
+			<if test="attestation != null">
+				attestation = #{attestation,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where 
+		<trim  suffix=" " suffixOverrides="and">
+			<if test="omuid != null">
+				omuid = #{omuid,jdbcType=INTEGER} and
+			</if>
+			<if test="buid != null">
+				 buid=#{buid,jdbcType=INTEGER} and
+			</if>
+		</trim>
+	</update>
+	<insert id="insertOrgSelective" parameterType="com.ss.pojo.Mass_organization">
+		insert into mass_organization
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="omuid != null">
+				omuid,
+			</if>
+			<if test="omuuid != null">
+				omuuid,
+			</if>
+			<if test="buid != null">
+				buid,
+			</if>
+			<if test="moname != null">
+				moname,
+			</if>
+			<if test="createtime != null">
+				createtime,
+			</if>
+			<if test="department != null">
+				department,
+			</if>
+			<if test="explains != null">
+				explains,
+			</if>
+			<if test="ompicture != null">
+				ompicture,
+			</if>
+			<if test="verify != null">
+				verify,
+			</if>
+			<if test="state != null">
+				state,
+			</if>
+			<if test="omcuid != null">
+				omcuid,
+			</if>
+			<if test="sid != null">
+				sid,
+			</if>
+			<if test="delstate != null">
+				delstate,
+			</if>
+			<if test="attestation != null">
+				attestation,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="omuid != null">
+				#{omuid,jdbcType=INTEGER},
+			</if>
+			<if test="omuuid != null">
+				#{omuuid,jdbcType=VARCHAR},
+			</if>
+			<if test="buid != null">
+				#{buid,jdbcType=INTEGER},
+			</if>
+			<if test="moname != null">
+				#{moname,jdbcType=VARCHAR},
+			</if>
+			<if test="createtime != null">
+				#{createtime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="department != null">
+				#{department,jdbcType=VARCHAR},
+			</if>
+			<if test="explains != null">
+				#{explains,jdbcType=VARCHAR},
+			</if>
+			<if test="ompicture != null">
+				#{ompicture,jdbcType=VARCHAR},
+			</if>
+			<if test="verify != null">
+				#{verify,jdbcType=TINYINT},
+			</if>
+			
+			<if test="state != null">
+				#{state,jdbcType=TINYINT},
+			</if>
+			<if test="omcuid != null">
+				#{omcuid,jdbcType=INTEGER},
+			</if>
+			<if test="sid != null">
+				#{sid,jdbcType=INTEGER},
+			</if>
+			<if test="delstate != null">
+				#{delstate,jdbcType=TINYINT},
+			</if>
+			<if test="attestation != null">
+				#{attestation,jdbcType=VARCHAR},
+			</if>
+		</trim>
+		<selectKey resultType="Integer" order="AFTER" keyProperty="omuid">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+	<!--  
+	<select id="selectByPhone" resultMap="BaseResultMap"
+		parameterType="java.lang.String">
+		select
+		<include refid="Base_Column_List" />
+		from baseinfo
+		where phone = #{phone,jdbcType=VARCHAR}
+	</select>
+
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+		delete from
+		baseinfo
+		where buid = #{buid,jdbcType=INTEGER}
+	</delete>
+
+	<insert id="insert" parameterType="com.ss.pojo.Baseinfo">
+		insert into baseinfo (buid, phone, password,
+		nick, register, lasttime,
+		used, msg, icon)
+		values (#{buid,jdbcType=INTEGER},
+		#{phone,jdbcType=VARCHAR},
+		#{password,jdbcType=VARCHAR},
+		#{nick,jdbcType=VARCHAR}, #{register,jdbcType=TIMESTAMP},
+		#{lasttime,jdbcType=TIMESTAMP},
+		#{used,jdbcType=SMALLINT},
+		#{msg,jdbcType=SMALLINT},
+		#{icon,jdbcType=VARCHAR})
+		<selectKey resultType="Integer" order="AFTER" keyProperty="buid">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+	<insert id="insertSelective" parameterType="com.ss.pojo.Baseinfo">
+		insert into baseinfo
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="buid != null">
+				buid,
+			</if>
+			<if test="phone != null">
+				phone,
+			</if>
+			<if test="password != null">
+				password,
+			</if>
+			<if test="nick != null">
+				nick,
+			</if>
+			<if test="register != null">
+				register,
+			</if>
+			<if test="lasttime != null">
+				lasttime,
+			</if>
+			<if test="used != null">
+				used,
+			</if>
+			<if test="msg != null">
+				msg,
+			</if>
+			<if test="icon != null">
+				icon,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="buid != null">
+				#{buid,jdbcType=INTEGER},
+			</if>
+			<if test="phone != null">
+				#{phone,jdbcType=VARCHAR},
+			</if>
+			<if test="password != null">
+				#{password,jdbcType=VARCHAR},
+			</if>
+			<if test="nick != null">
+				#{nick,jdbcType=VARCHAR},
+			</if>
+			<if test="register != null">
+				#{register,jdbcType=TIMESTAMP},
+			</if>
+			<if test="lasttime != null">
+				#{lasttime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="used != null">
+				#{used,jdbcType=SMALLINT},
+			</if>
+			<if test="msg != null">
+				#{msg,jdbcType=SMALLINT},
+			</if>
+			<if test="icon != null">
+				#{icon,jdbcType=VARCHAR},
+			</if>
+		</trim>
+		<selectKey resultType="Integer" order="AFTER" keyProperty="buid">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+
+	<update id="updateByPrimaryKeySelective" parameterType="com.ss.pojo.Baseinfo">
+		update baseinfo
+		<set>
+			<if test="phone != null">
+				phone = #{phone,jdbcType=VARCHAR},
+			</if>
+			<if test="password != null">
+				password = #{password,jdbcType=VARCHAR},
+			</if>
+			<if test="nick != null">
+				nick = #{nick,jdbcType=VARCHAR},
+			</if>
+			<if test="register != null">
+				register = #{register,jdbcType=TIMESTAMP},
+			</if>
+			<if test="lasttime != null">
+				lasttime = #{lasttime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="used != null">
+				used = #{used,jdbcType=SMALLINT},
+			</if>
+			<if test="msg != null">
+				msg = #{msg,jdbcType=SMALLINT},
+			</if>
+			<if test="icon != null">
+				icon = #{icon,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where buid = #{buid,jdbcType=INTEGER}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="com.ss.pojo.Baseinfo">
+		update baseinfo
+		set phone = #{phone,jdbcType=VARCHAR},
+		password =
+		#{password,jdbcType=VARCHAR},
+		nick = #{nick,jdbcType=VARCHAR},
+		register
+		= #{register,jdbcType=TIMESTAMP},
+		lasttime =
+		#{lasttime,jdbcType=TIMESTAMP},
+		used = #{used,jdbcType=SMALLINT},
+		msg =
+		#{msg,jdbcType=SMALLINT},
+		icon = #{icon,jdbcType=VARCHAR}
+		where buid =
+		#{buid,jdbcType=INTEGER}
+	</update>
+	<update id="updateLastloginTime" parameterType="com.ss.pojo.Baseinfo">
+		update baseinfo
+		set lasttime = #{lasttime,jdbcType=TIMESTAMP}
+		where buid =
+		#{buid,jdbcType=INTEGER}
+	</update>
+	 -->
+</mapper>

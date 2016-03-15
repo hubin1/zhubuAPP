@@ -1,0 +1,175 @@
+package com.ss.serviceImpl;
+
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.annotation.Resource;
+
+import org.apache.log4j.Logger;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.ss.dao.IBaseinfoDAO;
+import com.ss.dao.IMultiDynamicActivityDAO;
+import com.ss.dao.IUploadContentExamineDAO;
+import com.ss.dao.IVideoCommentDAO;
+import com.ss.pojo.Baseinfo;
+import com.ss.pojo.Baseinfo_Sample;
+import com.ss.pojo.MultiDynamicActivity;
+import com.ss.pojo.UploadContentExamine;
+import com.ss.pojo.VideoComment;
+import com.ss.service.VideoCommentService;
+import com.ss.util.DefaultVariables;
+import com.ss.util.ShrinkObject;
+
+/**
+ * 
+ * @author louis
+ *
+ */
+@Service("videoCommentServiceImpl")
+@Transactional
+public class VideoCommentServiceImpl implements VideoCommentService {
+
+	private Logger logger = Logger.getLogger(VideoCommentServiceImpl.class);
+
+	@Resource
+	private IVideoCommentDAO vdao;
+
+	@Resource
+	private IMultiDynamicActivityDAO dao;
+
+	@Resource
+	private IUploadContentExamineDAO udao;
+
+	@Resource
+	private IBaseinfoDAO bdao;
+
+	/**
+	 * 保存动态信息的类
+	 */
+	@Override
+	@Transactional(propagation = Propagation.REQUIRES_NEW, rollbackFor = { RuntimeException.class, Exception.class })
+	public int save(VideoComment comm) {
+		// 准备时间等信息
+		Date cur = new Date();
+		comm.setUploadtime(cur);
+		comm.setIspass(0);
+
+		// 插入子表
+		int back_a = vdao.insertSelective(comm);
+
+		// 主表
+		MultiDynamicActivity act = new MultiDynamicActivity();
+		act.setBuid(comm.getBuid());
+
+		act.setType(DefaultVariables.VIDEO);
+		act.setUploadtime(cur);
+		act.setRefid(comm.getVid());
+		int back_b = dao.insert(act);
+
+		// 插入待审核的信息
+		UploadContentExamine exam = new UploadContentExamine();
+		exam.setType(2);
+		exam.setRefid(comm.getVid());
+		exam.setUploadtime(cur);
+		int back_c = this.udao.insertSelective(exam);
+
+		return back_a + back_b + back_c == 3 ? 1 : 0;
+	}
+
+	// 为视频点赞
+	@Override
+	public int update4zan_add(int id) {
+		VideoComment vc = this.vdao.selectByPrimaryKey(id);
+		int n = vc.getZan() + 1;
+		vc.setZan(n);
+		return this.vdao.update4zan(vc);
+	}
+
+	// 取消视频点赞
+	@Override
+	public int update4zan_remove(int id) {
+		VideoComment vc = this.vdao.selectByPrimaryKey(id);
+		int n = vc.getZan() - 1;
+		vc.setZan(n);
+		return this.vdao.update4zan(vc);
+	}
+
+	/**
+	 * 获取指定的视频
+	 * 
+	 * @param type
+	 *            分类
+	 * @return
+	 */
+	@Override
+	public Map<String, Object> getAll(int cata, int type, int pageNum, int pageSize) {
+		PageHelper.startPage(pageNum, pageSize);
+
+		// 按照搜索条件进行
+//		switch (cata) {
+//		case DefaultVariables.ALL:
+//			break;
+//		case DefaultVariables.NORL:
+//			break;
+//		case DefaultVariables.NEWER:
+//			PageHelper.orderBy("uploadtime desc,ispass desc");
+//			break;
+//		case DefaultVariables.HOTEST:
+//			PageHelper.orderBy("zan desc,ispass desc");
+//			break;
+//		}
+
+		// 默认让已经审核过的内容先展示
+		PageHelper.orderBy("ispass desc");
+		List<VideoComment> list = null;
+		if(0 != type){
+			list = this.vdao.selectByType(type);
+		}else{
+			list = this.vdao.select();
+		}
+		PageInfo<VideoComment> pageinfo = new PageInfo<>(list);
+
+		for (VideoComment vc : list) {
+			int buid = vc.getBuid();
+			Baseinfo base = this.bdao.selectByPrimaryKey(buid);
+			Baseinfo_Sample sample = ShrinkObject.shrinkBaseInfo(base);
+			vc.setBaseinfosample(sample);
+		}
+
+		Map<String, Object> contents = new HashMap<String, Object>();
+		contents.put("total", pageinfo.getTotal());
+		contents.put("currentpage", pageinfo.getPageNum());
+		contents.put("list", list);
+		return contents;
+	}
+
+	@Override
+	public Map<String, Object> getVideoContainsImage(int cata, int pageNum, int pageSize) {
+		PageHelper.startPage(pageNum, pageSize);
+
+		List<VideoComment> list = null;
+		list = this.vdao.selectContainsImage();
+		PageInfo<VideoComment> pageinfo = new PageInfo<>(list);
+
+		for (VideoComment vc : list) {
+			int buid = vc.getBuid();
+			Baseinfo base = this.bdao.selectByPrimaryKey(buid);
+			Baseinfo_Sample sample = ShrinkObject.shrinkBaseInfo(base);
+			vc.setBaseinfosample(sample);
+		}
+
+		Map<String, Object> contents = new HashMap<String, Object>();
+		contents.put("total", pageinfo.getTotal());
+		contents.put("currentpage", pageinfo.getPageNum());
+		contents.put("list", list);
+		return contents;
+	}
+
+}

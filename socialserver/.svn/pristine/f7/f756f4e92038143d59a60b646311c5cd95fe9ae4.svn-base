@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ss.dao.IVideoCommentDAO">
+	<resultMap id="BaseResultMap" type="com.ss.pojo.VideoComment">
+		<id column="vid" property="vid" jdbcType="INTEGER" />
+		<result column="iname" property="iname" jdbcType="VARCHAR" />
+		<result column="vpos" property="vpos" jdbcType="VARCHAR" />
+		<result column="vsuffix" property="vsuffix" jdbcType="INTEGER" />
+		<result column="ipos" property="ipos" jdbcType="VARCHAR" />
+		<result column="comment" property="comment" jdbcType="VARCHAR" />
+		<result column="buid" property="buid" jdbcType="INTEGER" />
+		<result column="uploadtime" property="uploadtime" jdbcType="TIMESTAMP" />
+		<result column="zan" property="zan" jdbcType="INTEGER" />
+		<result column="ispass" property="ispass" jdbcType="INTEGER" />
+		<result column="temp" property="temp" jdbcType="VARCHAR" />
+		<result column="title" property="title" jdbcType="VARCHAR" />
+		<result column="type" property="type" jdbcType="INTEGER" />
+		<result column="url" property="url" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		vid, iname, vpos, ipos, vsuffix, comment, buid, uploadtime,zan, ispass, title, type, url<!-- , temp -->
+	</sql>
+	<select id="select" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from video_comment
+	</select>
+	
+	<select id="selectByType" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from video_comment
+		where type = #{type,jdbcType=INTEGER}
+	</select>
+	
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from video_comment
+		where vid = #{vid,jdbcType=INTEGER}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+		delete from video_comment
+		where vid = #{vid,jdbcType=INTEGER}
+	</delete>
+	<insert id="insert" parameterType="com.ss.pojo.VideoComment">
+		insert into video_comment (vid, iname, vpos, ipos, vsuffix,
+		comment, buid, uploadtime,zan,
+		ispass,title,type,url <!-- , temp -->)
+		values (#{vid,jdbcType=INTEGER}, #{iname,jdbcType=VARCHAR},
+		#{vpos,jdbcType=VARCHAR},#{ipos,jdbcType=VARCHAR},#{vsuffix,jdbcType=INTEGER},
+		#{comment,jdbcType=VARCHAR}, #{buid,jdbcType=INTEGER}, #{uploadtime,jdbcType=TIMESTAMP},#{zan,jdbcType=INTEGER},
+		#{ispass,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR} ,#{type,jdbcType=INTEGER}, #{url,jdbcType=VARCHAR}<!--, #{temp,jdbcType=VARCHAR} -->)
+		<selectKey resultType="Integer" order="AFTER" keyProperty="vid">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+	<insert id="insertSelective" parameterType="com.ss.pojo.VideoComment">
+		insert into video_comment
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="vid != null">
+				vid,
+			</if>
+			<if test="iname != null">
+				iname,
+			</if>
+			<if test="vpos != null">
+				vpos,
+			</if>
+			<if test="ipos != null">
+				ipos,
+			</if>
+			<if test="vsuffix != null">
+				vsuffix,
+			</if>
+			<if test="comment != null">
+				comment,
+			</if>
+			<if test="buid != null">
+				buid,
+			</if>
+			<if test="uploadtime != null">
+				uploadtime,
+			</if>
+			<if test="zan != null">
+				zan,
+			</if>
+			<if test="ispass != null">
+				ispass,
+			</if>
+			<if test="title != null">
+				title,
+			</if>
+			<if test="type != null">
+				type,
+			</if>
+			<if test="url != null">
+				url,
+			</if>
+			<!-- 
+			<if test="temp != null">
+				temp,
+			</if> -->
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="vid != null">
+				#{vid,jdbcType=INTEGER},
+			</if>
+			<if test="iname != null">
+				#{iname,jdbcType=VARCHAR},
+			</if>
+			<if test="vpos != null">
+				#{vpos,jdbcType=VARCHAR},
+			</if>
+			<if test="ipos != null">
+				#{ipos,jdbcType=VARCHAR},
+			</if>
+			<if test="vsuffix != null">
+				#{vsuffix,jdbcType=INTEGER},
+			</if>
+			<if test="comment != null">
+				#{comment,jdbcType=VARCHAR},
+			</if>
+			<if test="buid != null">
+				#{buid,jdbcType=INTEGER},
+			</if>
+			<if test="uploadtime != null">
+				#{uploadtime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="zan != null">
+				#{zan,jdbcType=INTEGER},
+			</if>
+			<if test="ispass != null">
+				#{ispass,jdbcType=INTEGER},
+			</if>
+			<if test="title != null">
+				#{title,jdbcType=VARCHAR},
+			</if>
+			<if test="type != null">
+				#{type,jdbcType=INTEGER},
+			</if>
+			<if test="url != null">
+				#{url,jdbcType=VARCHAR},
+			</if>
+			<!-- 
+			<if test="temp != null">
+				#{temp,jdbcType=VARCHAR},
+			</if> -->
+		</trim>
+		<selectKey resultType="Integer" order="AFTER" keyProperty="vid">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+	<update id="updateByPrimaryKeySelective" parameterType="com.ss.pojo.VideoComment">
+		update video_comment
+		<set>
+			<if test="iname != null">
+				iname = #{iname,jdbcType=VARCHAR},
+			</if>
+			<if test="vpos != null">
+				vpos = #{vpos,jdbcType=VARCHAR},
+			</if>
+			<if test="ipos != null">
+				ipos = #{ipos,jdbcType=VARCHAR},
+			</if>
+			<if test="vsuffix != null">
+				vsuffix = #{vsuffix,jdbcType=INTEGER},
+			</if>
+			<if test="comment != null">
+				comment = #{comment,jdbcType=VARCHAR},
+			</if>
+			<if test="buid != null">
+				buid = #{buid,jdbcType=INTEGER},
+			</if>
+			<if test="uploadtime != null">
+				uploadtime = #{uploadtime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="zan != null">
+				zan = #{zan,jdbcType=INTEGER},
+			</if>
+			<if test="ispass != null">
+				ispass = #{ispass,jdbcType=INTEGER},
+			</if>
+			<if test="title != null">
+				title = #{title,jdbcType=VARCHAR},
+			</if>
+			<if test="type != null">
+				type = #{type,jdbcType=INTEGER},
+			</if>
+			<if test="url != null">
+				url = #{url,jdbcType=VARCHAR},
+			</if>
+			<!-- 
+			<if test="temp != null">
+				temp = #{temp,jdbcType=VARCHAR},
+			</if> -->
+		</set>
+		where vid = #{vid,jdbcType=INTEGER}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="com.ss.pojo.VideoComment">
+		update video_comment
+		set iname = #{iname,jdbcType=VARCHAR},
+		vpos = #{vpos,jdbcType=VARCHAR},
+		ipos = #{ipos,jdbcType=VARCHAR},
+		vsuffix = #{vsuffix,jdbcType=INTEGER},
+		comment = #{comment,jdbcType=VARCHAR},
+		buid = #{buid,jdbcType=INTEGER},
+		uploadtime = #{uploadtime,jdbcType=TIMESTAMP},
+		zan = #{zan,jdbcType=INTEGER},
+		ispass = #{ispass,jdbcType=INTEGER},
+		title = #{title,jdbcType=VARCHAR},
+		type = #{type,jdbcType=INTEGER},
+		url = #{url,jdbcType=VARCHAR}
+		<!-- ,
+		temp = #{temp,jdbcType=VARCHAR} -->
+		where vid = #{vid,jdbcType=INTEGER}
+	</update>
+	
+	<update id="update4zan" parameterType="com.ss.pojo.VideoComment">
+		update video_comment
+		set zan = #{zan,jdbcType=INTEGER}
+		where vid = #{vid,jdbcType=INTEGER}
+	</update>
+</mapper>

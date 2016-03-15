@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ss.dao.IFollowVideoCommentDAO" >
+  <resultMap id="BaseResultMap" type="com.ss.pojo.FollowVideoComment" >
+    <id column="fvid" property="fvid" jdbcType="INTEGER" />
+    <result column="vid" property="vid" jdbcType="INTEGER" />
+    <result column="buid" property="buid" jdbcType="INTEGER" />
+    <result column="comment" property="comment" jdbcType="VARCHAR" />
+    <result column="uploadtime" property="uploadtime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    fvid, vid, buid, comment, uploadtime
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from follow_video_comment
+    where fvid = #{fvid,jdbcType=INTEGER}
+  </select>
+  
+  <select id="selectByVid" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from follow_video_comment
+    where vid = #{vid,jdbcType=INTEGER}
+  </select>
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from follow_video_comment
+    where fvid = #{fvid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.ss.pojo.FollowVideoComment" >
+    insert into follow_video_comment (fvid, vid, buid, 
+      comment, uploadtime)
+    values (#{fvid,jdbcType=INTEGER}, #{vid,jdbcType=INTEGER}, #{buid,jdbcType=INTEGER}, 
+      #{comment,jdbcType=VARCHAR}, #{uploadtime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ss.pojo.FollowVideoComment" >
+    insert into follow_video_comment
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="fvid != null" >
+        fvid,
+      </if>
+      <if test="vid != null" >
+        vid,
+      </if>
+      <if test="buid != null" >
+        buid,
+      </if>
+      <if test="comment != null" >
+        comment,
+      </if>
+      <if test="uploadtime != null" >
+        uploadtime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="fvid != null" >
+        #{fvid,jdbcType=INTEGER},
+      </if>
+      <if test="vid != null" >
+        #{vid,jdbcType=INTEGER},
+      </if>
+      <if test="buid != null" >
+        #{buid,jdbcType=INTEGER},
+      </if>
+      <if test="comment != null" >
+        #{comment,jdbcType=VARCHAR},
+      </if>
+      <if test="uploadtime != null" >
+        #{uploadtime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ss.pojo.FollowVideoComment" >
+    update follow_video_comment
+    <set >
+      <if test="vid != null" >
+        vid = #{vid,jdbcType=INTEGER},
+      </if>
+      <if test="buid != null" >
+        buid = #{buid,jdbcType=INTEGER},
+      </if>
+      <if test="comment != null" >
+        comment = #{comment,jdbcType=VARCHAR},
+      </if>
+      <if test="uploadtime != null" >
+        uploadtime = #{uploadtime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where fvid = #{fvid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ss.pojo.FollowVideoComment" >
+    update follow_video_comment
+    set vid = #{vid,jdbcType=INTEGER},
+      buid = #{buid,jdbcType=INTEGER},
+      comment = #{comment,jdbcType=VARCHAR},
+      uploadtime = #{uploadtime,jdbcType=TIMESTAMP}
+    where fvid = #{fvid,jdbcType=INTEGER}
+  </update>
+</mapper>

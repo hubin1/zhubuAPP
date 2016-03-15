@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ss.dao.IUploadContentExamineDAO" >
+  <resultMap id="BaseResultMap" type="com.ss.pojo.UploadContentExamine" >
+    <id column="ceid" property="ceid" jdbcType="INTEGER" />
+    <result column="uploadtime" property="uploadtime" jdbcType="TIMESTAMP" />
+    <result column="ispass" property="ispass" jdbcType="INTEGER" />
+    <result column="type" property="type" jdbcType="INTEGER" />
+    <result column="refid" property="refid" jdbcType="INTEGER" />
+    <result column="examinetime" property="examinetime" jdbcType="TIMESTAMP" />
+    <result column="fillA" property="filla" jdbcType="INTEGER" />
+    <result column="fillB" property="fillb" jdbcType="INTEGER" />
+    <result column="fillC" property="fillc" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ceid, uploadtime, ispass, type, refid, examinetime, fillA, fillB, fillC
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from upload_content_examine
+    where ceid = #{ceid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from upload_content_examine
+    where ceid = #{ceid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.ss.pojo.UploadContentExamine" >
+  <!-- insert into upload_content_examine (ceid, uploadtime, ispass, 
+      type, refid, examinetime, 
+      fillA, fillB, fillC
+      )
+    values (#{ceid,jdbcType=INTEGER}, #{uploadtime,jdbcType=TIMESTAMP}, #{ispass,jdbcType=INTEGER}, 
+      #{type,jdbcType=INTEGER}, #{refid,jdbcType=INTEGER}, #{examinetime,jdbcType=TIMESTAMP}, 
+      #{filla,jdbcType=INTEGER}, #{fillb,jdbcType=INTEGER}, #{fillc,jdbcType=INTEGER}
+      ) -->
+      
+      insert into upload_content_examine (ceid, uploadtime, ispass, 
+      type, refid, examinetime
+      )
+    values (#{ceid,jdbcType=INTEGER}, #{uploadtime,jdbcType=TIMESTAMP}, #{ispass,jdbcType=INTEGER}, 
+      #{type,jdbcType=INTEGER}, #{refid,jdbcType=INTEGER}, #{examinetime,jdbcType=TIMESTAMP})
+      
+  </insert>
+  <insert id="insertSelective" parameterType="com.ss.pojo.UploadContentExamine" >
+    insert into upload_content_examine
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="ceid != null" >
+        ceid,
+      </if>
+      <if test="uploadtime != null" >
+        uploadtime,
+      </if>
+      <if test="ispass != null" >
+        ispass,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="refid != null" >
+        refid,
+      </if>
+      <if test="examinetime != null" >
+        examinetime,
+      </if>
+      <!-- <if test="filla != null" >
+        fillA,
+      </if>
+      <if test="fillb != null" >
+        fillB,
+      </if>
+      <if test="fillc != null" >
+        fillC,
+      </if> -->
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="ceid != null" >
+        #{ceid,jdbcType=INTEGER},
+      </if>
+      <if test="uploadtime != null" >
+        #{uploadtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ispass != null" >
+        #{ispass,jdbcType=INTEGER},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=INTEGER},
+      </if>
+      <if test="refid != null" >
+        #{refid,jdbcType=INTEGER},
+      </if>
+      <if test="examinetime != null" >
+        #{examinetime,jdbcType=TIMESTAMP},
+      </if>
+     <!--  <if test="filla != null" >
+        #{filla,jdbcType=INTEGER},
+      </if>
+      <if test="fillb != null" >
+        #{fillb,jdbcType=INTEGER},
+      </if>
+      <if test="fillc != null" >
+        #{fillc,jdbcType=INTEGER},
+      </if> -->
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ss.pojo.UploadContentExamine" >
+    update upload_content_examine
+    <set >
+      <if test="uploadtime != null" >
+        uploadtime = #{uploadtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ispass != null" >
+        ispass = #{ispass,jdbcType=INTEGER},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="refid != null" >
+        refid = #{refid,jdbcType=INTEGER},
+      </if>
+      <if test="examinetime != null" >
+        examinetime = #{examinetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="filla != null" >
+        fillA = #{filla,jdbcType=INTEGER},
+      </if>
+      <if test="fillb != null" >
+        fillB = #{fillb,jdbcType=INTEGER},
+      </if>
+      <if test="fillc != null" >
+        fillC = #{fillc,jdbcType=INTEGER},
+      </if>
+    </set>
+    where ceid = #{ceid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ss.pojo.UploadContentExamine" >
+    update upload_content_examine
+    set uploadtime = #{uploadtime,jdbcType=TIMESTAMP},
+      ispass = #{ispass,jdbcType=INTEGER},
+      type = #{type,jdbcType=INTEGER},
+      refid = #{refid,jdbcType=INTEGER},
+      examinetime = #{examinetime,jdbcType=TIMESTAMP},
+      fillA = #{filla,jdbcType=INTEGER},
+      fillB = #{fillb,jdbcType=INTEGER},
+      fillC = #{fillc,jdbcType=INTEGER}
+    where ceid = #{ceid,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ss.dao.IMultiDynamicActivityDAO" >
+  <resultMap id="BaseResultMap" type="com.ss.pojo.MultiDynamicActivity" >
+    <id column="mdid" property="mdid" jdbcType="INTEGER" />
+    <result column="buid" property="buid" jdbcType="INTEGER" />
+    <result column="type" property="type" jdbcType="INTEGER" />
+    <result column="refid" property="refid" jdbcType="INTEGER" />
+    <result column="uploadtime" property="uploadtime" jdbcType="TIMESTAMP" />
+    <result column="domain" property="domain" jdbcType="VARCHAR" />
+    <result column="fillA" property="filla" jdbcType="INTEGER" />
+    <result column="fillB" property="fillb" jdbcType="INTEGER" />
+    <result column="fillC" property="fillc" jdbcType="INTEGER" />
+    <result column="updatetime" property="updatetime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  
+  <sql id="Base_Column_List" >
+    mdid, buid, type, refid, uploadtime, domain, fillA, fillB, fillC, updatetime
+  </sql>
+  
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select mdid, buid, type, refid, uploadtime,updatetime 
+    from multi_dynamic_activity
+    where mdid = #{mdid,jdbcType=INTEGER}
+  </select>
+  
+  <select id="selectByBUID" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select mdid, buid, type, refid, uploadtime,updatetime 
+    from multi_dynamic_activity
+    where buid = #{buid,jdbcType=INTEGER}
+  </select>
+  
+  <select id="selectAllWithRelationShip" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select mdid, buid, type, tabA.refid, uploadtime,updatetime 
+    from multi_dynamic_activity tabA INNER JOIN
+    (SELECT refid FROM friend_relationship WHERE buid = #{buid,jdbcType=INTEGER} AND bind = 1) tabB
+    ON tabA.buid = tabB.refid
+  </select>
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from multi_dynamic_activity
+    where mdid = #{mdid,jdbcType=INTEGER}
+  </delete>
+  
+  <insert id="insert" parameterType="com.ss.pojo.MultiDynamicActivity" >
+    insert into multi_dynamic_activity (mdid, buid, type, 
+      refid, uploadtime,
+      domain, fillA, fillB, 
+      fillC, updatetime)
+    values (#{mdid,jdbcType=INTEGER}, #{buid,jdbcType=INTEGER}, #{type,jdbcType=INTEGER}, 
+      #{refid,jdbcType=INTEGER}, #{uploadtime,jdbcType=TIMESTAMP}, 
+      #{domain,jdbcType=VARCHAR}, #{filla,jdbcType=INTEGER}, #{fillb,jdbcType=INTEGER}, 
+      #{fillc,jdbcType=INTEGER}, #{updatetime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ss.pojo.MultiDynamicActivity" >
+    insert into multi_dynamic_activity
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="mdid != null" >
+        mdid,
+      </if>
+      <if test="buid != null" >
+        buid,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="refid != null" >
+        refid,
+      </if>
+      <if test="uploadtime != null" >
+        uploadtime,
+      </if>
+      <if test="domain != null" >
+        domain,
+      </if>
+      <if test="filla != null" >
+        fillA,
+      </if>
+      <if test="fillb != null" >
+        fillB,
+      </if>
+      <if test="fillc != null" >
+        fillC,
+      </if>
+      <if test="updatetime != null" >
+        updatetime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="mdid != null" >
+        #{mdid,jdbcType=INTEGER},
+      </if>
+      <if test="buid != null" >
+        #{buid,jdbcType=INTEGER},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=INTEGER},
+      </if>
+      <if test="refid != null" >
+        #{refid,jdbcType=INTEGER},
+      </if>
+      <if test="uploadtime != null" >
+        #{uploadtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="domain != null" >
+        #{domain,jdbcType=VARCHAR},
+      </if>
+      <if test="filla != null" >
+        #{filla,jdbcType=INTEGER},
+      </if>
+      <if test="fillb != null" >
+        #{fillb,jdbcType=INTEGER},
+      </if>
+      <if test="fillc != null" >
+        #{fillc,jdbcType=INTEGER},
+      </if>
+      <if test="updatetime != null" >
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ss.pojo.MultiDynamicActivity" >
+    update multi_dynamic_activity
+    <set >
+      <if test="buid != null" >
+        buid = #{buid,jdbcType=INTEGER},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="refid != null" >
+        refid = #{refid,jdbcType=INTEGER},
+      </if>
+      <if test="uploadtime != null" >
+        uploadtime = #{uploadtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="domain != null" >
+        domain = #{domain,jdbcType=VARCHAR},
+      </if>
+      <if test="filla != null" >
+        fillA = #{filla,jdbcType=INTEGER},
+      </if>
+      <if test="fillb != null" >
+        fillB = #{fillb,jdbcType=INTEGER},
+      </if>
+      <if test="fillc != null" >
+        fillC = #{fillc,jdbcType=INTEGER},
+      </if>
+      <if test="updatetime != null" >
+        updatetime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where mdid = #{mdid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ss.pojo.MultiDynamicActivity" >
+    update multi_dynamic_activity
+    set buid = #{buid,jdbcType=INTEGER},
+      type = #{type,jdbcType=INTEGER},
+      refid = #{refid,jdbcType=INTEGER},
+      uploadtime = #{uploadtime,jdbcType=TIMESTAMP},
+      domain = #{domain,jdbcType=VARCHAR},
+      fillA = #{filla,jdbcType=INTEGER},
+      fillB = #{fillb,jdbcType=INTEGER},
+      fillC = #{fillc,jdbcType=INTEGER},
+      updatetime = #{updatetime,jdbcType=TIMESTAMP}
+    where mdid = #{mdid,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,18 @@
+package com.ss.service;
+
+import java.util.Map;
+
+import com.ss.pojo.VideoComment;
+
+public interface VideoCommentService {
+	public int save(VideoComment comm);
+	
+	public int update4zan_add(int id);
+	public int update4zan_remove(int id);
+	
+	public Map<String, Object> getAll(int cata, int type, int pageNum, int pageSize);
+	
+	public Map<String, Object> getVideoContainsImage(int cata, int pageNum, int pageSize);
+	
+	
+}

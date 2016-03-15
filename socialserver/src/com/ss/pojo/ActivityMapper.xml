@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ss.dao.IOrganization_ActivityDAO">
+	<resultMap id="ActResultMap" type="com.ss.pojo.Mass_organization_activity">
+		<id column="moauid" property="moauid" jdbcType="INTEGER" />
+		<result column="uid" property="uid" jdbcType="INTEGER" />
+		<result column="omuid" property="omuid" jdbcType="INTEGER" />
+		<result column="moname" property="moname" jdbcType="VARCHAR" />
+		<result column="place" property="place" jdbcType="VARCHAR" />
+		<result column="stime" property="stime" jdbcType="TIMESTAMP" />
+		<result column="etime" property="etime" jdbcType="TIMESTAMP" />
+		<result column="refid" property="refid" jdbcType="INTEGER" />
+		<result column="type" property="type" jdbcType="TINYINT" />
+		<result column="state" property="state" jdbcType="TINYINT" />
+		<result column="actionid" property="actionid" jdbcType="VARCHAR" />
+		<result column="introduce" property="introduce" jdbcType="VARCHAR" />
+		<result column="delstate" property="delstate" jdbcType="TINYINT" />
+		<result column="evalnum" property="evalnum" jdbcType="INTEGER" />
+	</resultMap>
+	<resultMap id="ActResultListMap" type="java.util.Map">
+		<id column="moauid" property="moauid" jdbcType="INTEGER" />
+		<result column="moname" property="moname" jdbcType="VARCHAR" />
+		<result column="refid" property="refid" jdbcType="INTEGER" />
+	</resultMap>
+	<sql id="Act_Column_List">
+		moauid, uid, omuid,moname, place, stime, etime, refid, type,
+		state,actionid,introduce,delstate,evalnum
+	</sql>
+	<sql id="Act_Column_List2">
+		moauid, moname,refid
+	</sql>
+
+	<select id="selectCount" resultType="Integer">
+		select count(0) from
+		mass_organization_activity
+	</select>
+
+	<select id="selectAllByActivity" resultMap="ActResultMap"
+		parameterType="com.ss.pojo.Mass_organization_activity">
+		select
+		<include refid="Act_Column_List" />
+		from mass_organization_activity
+		where 
+		<trim  suffix=" " suffixOverrides="and">
+			<if test="moauid != null">
+				moauid = #{moauid,jdbcType=INTEGER} and
+			</if>
+			<if test="uid != null">
+				uid = #{uid,jdbcType=INTEGER} and
+			</if>
+			<if test="omuid != null">
+				omuid = #{omuid,jdbcType=INTEGER} and
+			</if>
+		</trim>
+	</select>
+	
+	<select id="selectAllByActivityList" resultMap="ActResultListMap"
+		parameterType="com.ss.pojo.Mass_organization_activity">
+		select
+		<include refid="Act_Column_List2" />
+		from mass_organization_activity
+		<if test="moauid != null || uid != null || omuid != null || stime != null || etime != null || type!=null">
+			where 
+		</if>
+		<trim  suffix=" " suffixOverrides="and">
+			<if test="moauid != null">
+				moauid = #{moauid,jdbcType=INTEGER} and
+			</if>
+			<if test="uid != null">
+				uid = #{uid,jdbcType=INTEGER} and
+			</if>
+			<if test="omuid != null">
+				omuid = #{omuid,jdbcType=INTEGER} and
+			</if>
+			<if test="stime != null">
+				stime = #{stime,jdbcType=TIMESTAMP} and
+			</if>
+			<if test="etime != null">
+				etime = #{etime,jdbcType=TIMESTAMP} and
+			</if>
+			<if test="type != null">
+				type = #{type,jdbcType=TINYINT} and
+			</if>
+			<if test="state != null">
+				state = #{state,jdbcType=TINYINT} and
+			</if>
+			<if test="actionid != null">
+				actionid = #{actionid,jdbcType=VARCHAR} and
+			</if>
+			<if test="delstate != null">
+				delstate = #{delstate,jdbcType=TINYINT} and
+			</if>
+		</trim>
+		order by moauid limit #{currentPage,jdbcType=INTEGER},
+		#{number,jdbcType=INTEGER}
+	</select>
+
+	<select id="selectAll" resultMap="ActResultMap">
+		select
+		<include refid="Act_Column_List" />
+		from mass_organization_activity
+	</select>
+
+	<update id="updateByActSelective" parameterType="com.ss.pojo.Mass_organization_activity">
+		update mass_organization_activity
+		<set>
+			<if test="place != null">
+				place = #{place,jdbcType=VARCHAR},
+			</if>
+			<if test="stime != null">
+				stime = #{stime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="etime != null">
+				etime = #{etime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="refid != null">
+				refid = #{refid,jdbcType=INTEGER},
+			</if>
+			<if test="type != null">
+				type = #{type,jdbcType=TINYINT},
+			</if>
+			<if test="state != null">
+				state = #{state,jdbcType=TINYINT},
+			</if>
+			<if test="actionid != null">
+				actionid = #{actionid,jdbcType=VARCHAR},
+			</if>
+			<if test="introduce != null">
+				introduce = #{introduce,jdbcType=VARCHAR},
+			</if>
+			<if test="delstate != null">
+				delstate = #{delstate,jdbcType=TINYINT},
+			</if>
+			<if test="evalnum != null">
+				evalnum = #{evalnum,jdbcType=INTEGER},
+			</if>
+		</set>
+		where moauid = #{moauid,jdbcType=INTEGER} and
+		uid=#{uid,jdbcType=INTEGER} and omuid=#{omuid,jdbcType=INTEGER}
+	</update>
+
+	<insert id="insertActSelective" parameterType="com.ss.pojo.Mass_organization_activity">
+		insert into mass_organization_activity
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="uid != null">
+				uid,
+			</if>
+			<if test="omuid != null">
+				omuid,
+			</if>
+			<if test="moname != null">
+				moname,
+			</if>
+			<if test="place != null">
+				place,
+			</if>
+			<if test="stime != null">
+				stime,
+			</if>
+			<if test="etime != null">
+				etime,
+			</if>
+			<if test="refid != null">
+				refid,
+			</if>
+			<if test="type != null">
+				type,
+			</if>
+			<if test="state != null">
+				state,
+			</if>
+			<if test="actionid != null">
+				actionid,
+			</if>
+			<if test="introduce != null">
+				introduce,
+			</if>
+			<if test="delstate != null">
+				delstate,
+			</if>
+			<if test="evalnum != null">
+				evalnum,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="uid != null">
+				#{uid,jdbcType=INTEGER},
+			</if>
+			<if test="omuid != null">
+				#{omuid,jdbcType=INTEGER},
+			</if>
+			<if test="moname != null">
+				#{moname,jdbcType=VARCHAR},
+			</if>
+			<if test="place != null">
+				#{place,jdbcType=VARCHAR},
+			</if>
+			<if test="stime != null">
+				#{stime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="etime != null">
+				#{etime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="refid != null">
+				#{refid,jdbcType=INTEGER},
+			</if>
+			<if test="type != null">
+				#{type,jdbcType=TINYINT},
+			</if>
+			<if test="state != null">
+				#{state,jdbcType=TINYINT},
+			</if>
+			<if test="actionid != null">
+				#{actionid,jdbcType=VARCHAR},
+			</if>
+			<if test="introduce != null">
+				#{introduce,jdbcType=VARCHAR},
+			</if>
+			<if test="delstate != null">
+				#{delstate,jdbcType=TINYINT},
+			</if>
+			<if test="evalnum != null">
+				#{evalnum,jdbcType=INTEGER},
+			</if>
+		</trim>
+		<selectKey resultType="Integer" order="AFTER" keyProperty="moauid">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+</mapper>

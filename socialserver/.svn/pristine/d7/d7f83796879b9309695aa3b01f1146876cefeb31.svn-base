@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ss.dao.IBaseinfoDAO">
+	<resultMap id="BaseResultMap" type="com.ss.pojo.Baseinfo">
+		<id column="buid" property="buid" jdbcType="INTEGER" />
+		<result column="phone" property="phone" jdbcType="VARCHAR" />
+		<result column="password" property="password" jdbcType="VARCHAR" />
+		<result column="nick" property="nick" jdbcType="VARCHAR" />
+		<result column="register" property="register" jdbcType="TIMESTAMP" />
+		<result column="lasttime" property="lasttime" jdbcType="TIMESTAMP" />
+		<result column="used" property="used" jdbcType="SMALLINT" />
+		<result column="msg" property="msg" jdbcType="SMALLINT" />
+		<result column="icon" property="icon" jdbcType="VARCHAR" />
+		<result column="ipos" property="ipos" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		buid, phone, password, nick, register, lasttime, used, msg,
+		icon, ipos
+	</sql>
+
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from baseinfo
+		where buid = #{buid,jdbcType=INTEGER}
+	</select>
+	<select id="selectAll" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from baseinfo
+	</select>
+	<select id="selectByPhone" resultMap="BaseResultMap"
+		parameterType="java.lang.String">
+		select
+		<include refid="Base_Column_List" />
+		from baseinfo
+		where phone = #{phone,jdbcType=VARCHAR}
+	</select>
+
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+		delete from
+		baseinfo
+		where buid = #{buid,jdbcType=INTEGER}
+	</delete>
+
+	<insert id="insert" parameterType="com.ss.pojo.Baseinfo">
+		insert into baseinfo (buid, phone, password,
+		nick, register, lasttime,
+		used, msg, icon, ipos)
+		values (#{buid,jdbcType=INTEGER},
+		#{phone,jdbcType=VARCHAR},
+		#{password,jdbcType=VARCHAR},
+		#{nick,jdbcType=VARCHAR}, #{register,jdbcType=TIMESTAMP},
+		#{lasttime,jdbcType=TIMESTAMP},
+		#{used,jdbcType=SMALLINT},
+		#{msg,jdbcType=SMALLINT},
+		#{icon,jdbcType=VARCHAR}),
+		#{icon,jdbcType=VARCHAR})
+		<selectKey resultType="Integer" order="AFTER" keyProperty="buid">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+	<insert id="insertSelective" parameterType="com.ss.pojo.Baseinfo">
+		insert into baseinfo
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="buid != null">
+				buid,
+			</if>
+			<if test="phone != null">
+				phone,
+			</if>
+			<if test="password != null">
+				password,
+			</if>
+			<if test="nick != null">
+				nick,
+			</if>
+			<if test="register != null">
+				register,
+			</if>
+			<if test="lasttime != null">
+				lasttime,
+			</if>
+			<if test="used != null">
+				used,
+			</if>
+			<if test="msg != null">
+				msg,
+			</if>
+			<if test="icon != null">
+				icon,
+			</if>
+			<if test="ipos != null">
+				ipos,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="buid != null">
+				#{buid,jdbcType=INTEGER},
+			</if>
+			<if test="phone != null">
+				#{phone,jdbcType=VARCHAR},
+			</if>
+			<if test="password != null">
+				#{password,jdbcType=VARCHAR},
+			</if>
+			<if test="nick != null">
+				#{nick,jdbcType=VARCHAR},
+			</if>
+			<if test="register != null">
+				#{register,jdbcType=TIMESTAMP},
+			</if>
+			<if test="lasttime != null">
+				#{lasttime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="used != null">
+				#{used,jdbcType=SMALLINT},
+			</if>
+			<if test="msg != null">
+				#{msg,jdbcType=SMALLINT},
+			</if>
+			<if test="icon != null">
+				#{icon,jdbcType=VARCHAR},
+			</if>
+			<if test="ipos != null">
+				#{ipos,jdbcType=VARCHAR},
+			</if>
+		</trim>
+		<selectKey resultType="Integer" order="AFTER" keyProperty="buid">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+
+	<update id="updateByPrimaryKeySelective" parameterType="com.ss.pojo.Baseinfo">
+		update baseinfo
+		<set>
+			<if test="phone != null">
+				phone = #{phone,jdbcType=VARCHAR},
+			</if>
+			<if test="password != null">
+				password = #{password,jdbcType=VARCHAR},
+			</if>
+			<if test="nick != null">
+				nick = #{nick,jdbcType=VARCHAR},
+			</if>
+			<if test="register != null">
+				register = #{register,jdbcType=TIMESTAMP},
+			</if>
+			<if test="lasttime != null">
+				lasttime = #{lasttime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="used != null">
+				used = #{used,jdbcType=SMALLINT},
+			</if>
+			<if test="msg != null">
+				msg = #{msg,jdbcType=SMALLINT},
+			</if>
+			<if test="icon != null">
+				icon = #{icon,jdbcType=VARCHAR},
+			</if>
+			<if test="ipos != null">
+				ipos = #{ipos,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where buid = #{buid,jdbcType=INTEGER}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="com.ss.pojo.Baseinfo">
+		update baseinfo
+		set phone = #{phone,jdbcType=VARCHAR},
+		password =
+		#{password,jdbcType=VARCHAR},
+		nick = #{nick,jdbcType=VARCHAR},
+		register
+		= #{register,jdbcType=TIMESTAMP},
+		lasttime =
+		#{lasttime,jdbcType=TIMESTAMP},
+		used = #{used,jdbcType=SMALLINT},
+		msg =
+		#{msg,jdbcType=SMALLINT},
+		icon = #{icon,jdbcType=VARCHAR},
+		ipos = #{ipos,jdbcType=VARCHAR}
+		where buid =
+		#{buid,jdbcType=INTEGER}
+	</update>
+	<update id="updateLastloginTime" parameterType="com.ss.pojo.Baseinfo">
+		update baseinfo
+		set lasttime = #{lasttime,jdbcType=TIMESTAMP}
+		where buid =
+		#{buid,jdbcType=INTEGER}
+	</update>
+	<update id="updatePassword" parameterType="com.ss.pojo.Baseinfo">
+		update baseinfo
+		set
+		password = #{password,jdbcType=VARCHAR}
+		where buid =
+		#{buid,jdbcType=INTEGER}
+	</update>
+	<update id="updateIcon" parameterType="com.ss.pojo.Baseinfo">
+		update baseinfo
+		set
+		icon = #{icon,jdbcType=VARCHAR},
+		ipos = #{ipos,jdbcType=VARCHAR},
+		where buid =
+		#{buid,jdbcType=INTEGER}
+	</update>
+</mapper>

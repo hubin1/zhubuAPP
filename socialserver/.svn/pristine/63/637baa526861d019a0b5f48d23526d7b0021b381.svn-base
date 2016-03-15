@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ss.dao.IEval_group_userDAO">
+	<resultMap id="evalResultMap" type="com.ss.pojo.Eval_group_user">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="moauid" property="moauid" jdbcType="INTEGER" />
+		<result column="buid" property="buid" jdbcType="INTEGER" />
+		<result column="time" property="time" jdbcType="TIMESTAMP" />
+	</resultMap>
+	<sql id="Eval_Column_List">
+		id,moauid,buid,time
+	</sql>
+	<select id="selectEval" parameterType="com.ss.pojo.Eval_group_user" resultMap="evalResultMap">
+		select 
+		<include refid="Eval_Column_List" />
+		from eval_group_user
+		where moauid=#{moauid,jdbcType=INTEGER} and buid=#{buid,jdbcType=INTEGER}
+	</select>
+	<insert id="insertEval" parameterType="com.ss.pojo.Eval_group_user">
+		insert into eval_group_user (moauid,buid,time)
+		values (#{moauid,jdbcType=INTEGER},#{buid,jdbcType=INTEGER},#{time,jdbcType=TIMESTAMP}
+		)
+		<selectKey resultType="Integer" order="AFTER" keyProperty="id">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+</mapper>

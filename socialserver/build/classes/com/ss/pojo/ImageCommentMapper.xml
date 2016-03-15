@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ss.dao.IImageCommentDAO">
+	<resultMap id="BaseResultMap" type="com.ss.pojo.ImageComment">
+		<id column="icid" jdbcType="INTEGER" property="icid" />
+		<result column="uploadtime" jdbcType="TIMESTAMP" property="uploadtime" />
+		<result column="ipos" jdbcType="VARCHAR" property="ipos" />
+		<result column="comment" jdbcType="VARCHAR" property="comment" />
+		<result column="imga" jdbcType="VARCHAR" property="imga" />
+		<result column="imgb" jdbcType="VARCHAR" property="imgb" />
+		<result column="imgc" jdbcType="VARCHAR" property="imgc" />
+		<result column="imgd" jdbcType="VARCHAR" property="imgd" />
+		<result column="imge" jdbcType="VARCHAR" property="imge" />
+		<result column="imgf" jdbcType="VARCHAR" property="imgf" />
+		<result column="buid" jdbcType="INTEGER" property="buid" />
+		<result column="zan" property="zan" jdbcType="INTEGER" />
+		<result column="ispass" jdbcType="INTEGER" property="ispass" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		icid, uploadtime, imga, imgb, imgc, imgd, imge, imgf, buid,
+		ispass,zan, ipos,
+		comment
+	</sql>
+	<select id="selectByPrimaryKey" parameterType="java.lang.Integer"
+		resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from image_comment
+		where icid = #{icid,jdbcType=INTEGER}
+	</select>
+	
+	<select id="select" parameterType="java.lang.Integer"
+		resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from image_comment
+	</select>
+	
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+		delete from
+		image_comment
+		where icid = #{icid,jdbcType=INTEGER}
+	</delete>
+	<insert id="insert" parameterType="com.ss.pojo.ImageComment">
+		insert into image_comment (icid, uploadtime, imga,
+		imgb, imgc, imgd,
+		imge,
+		imgf, buid, ispass, zan, ipos, comment)
+		values
+		(#{icid,jdbcType=INTEGER}, #{uploadtime,jdbcType=TIMESTAMP},
+		#{imga,jdbcType=VARCHAR},
+		#{imgb,jdbcType=VARCHAR},
+		#{imgc,jdbcType=VARCHAR}, #{imgd,jdbcType=VARCHAR},
+		#{imge,jdbcType=VARCHAR},
+		#{imgf,jdbcType=VARCHAR},
+		#{buid,jdbcType=INTEGER},
+		#{ispass,jdbcType=INTEGER},
+		#{zan,jdbcType=INTEGER},
+		#{ipos,jdbcType=VARCHAR},#{comment,jdbcType=VARCHAR})
+		<selectKey resultType="Integer" order="AFTER" keyProperty="icid">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+	<insert id="insertSelective" parameterType="com.ss.pojo.ImageComment">
+		insert into image_comment
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="icid != null">
+				icid,
+			</if>
+			<if test="uploadtime != null">
+				uploadtime,
+			</if>
+			<if test="imga != null">
+				imga,
+			</if>
+			<if test="imgb != null">
+				imgb,
+			</if>
+			<if test="imgc != null">
+				imgc,
+			</if>
+			<if test="imgd != null">
+				imgd,
+			</if>
+			<if test="imge != null">
+				imge,
+			</if>
+			<if test="imgf != null">
+				imgf,
+			</if>
+			<if test="buid != null">
+				buid,
+			</if>
+			<if test="zan != null">
+				zan,
+			</if>
+			<if test="ispass != null">
+				ispass,
+			</if>
+			<if test="ipos != null">
+				ipos,
+			</if>
+			<if test="comment != null">
+				comment,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="icid != null">
+				#{icid,jdbcType=INTEGER},
+			</if>
+			<if test="uploadtime != null">
+				#{uploadtime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="imga != null">
+				#{imga,jdbcType=VARCHAR},
+			</if>
+			<if test="imgb != null">
+				#{imgb,jdbcType=VARCHAR},
+			</if>
+			<if test="imgc != null">
+				#{imgc,jdbcType=VARCHAR},
+			</if>
+			<if test="imgd != null">
+				#{imgd,jdbcType=VARCHAR},
+			</if>
+			<if test="imge != null">
+				#{imge,jdbcType=VARCHAR},
+			</if>
+			<if test="imgf != null">
+				#{imgf,jdbcType=VARCHAR},
+			</if>
+			<if test="buid != null">
+				#{buid,jdbcType=INTEGER},
+			</if>
+			<if test="zan != null">
+				#{zan,jdbcType=INTEGER},
+			</if>
+			<if test="ispass != null">
+				#{ispass,jdbcType=INTEGER},
+			</if>
+			<if test="ipos != null">
+				#{ipos,jdbcType=VARCHAR},
+			</if>
+			<if test="comment != null">
+				#{comment,jdbcType=VARCHAR},
+			</if>
+		</trim>
+		<selectKey resultType="Integer" order="AFTER" keyProperty="icid">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+	<update id="updateByPrimaryKeySelective" parameterType="com.ss.pojo.ImageComment">
+		update image_comment
+		<set>
+			<if test="uploadtime != null">
+				uploadtime = #{uploadtime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="imga != null">
+				imga = #{imga,jdbcType=VARCHAR},
+			</if>
+			<if test="imgb != null">
+				imgb = #{imgb,jdbcType=VARCHAR},
+			</if>
+			<if test="imgc != null">
+				imgc = #{imgc,jdbcType=VARCHAR},
+			</if>
+			<if test="imgd != null">
+				imgd = #{imgd,jdbcType=VARCHAR},
+			</if>
+			<if test="imge != null">
+				imge = #{imge,jdbcType=VARCHAR},
+			</if>
+			<if test="imgf != null">
+				imgf = #{imgf,jdbcType=VARCHAR},
+			</if>
+			<if test="buid != null">
+				buid = #{buid,jdbcType=INTEGER},
+			</if>
+			<if test="zan != null">
+				zan = #{zan,jdbcType=INTEGER},
+			</if>
+			<if test="ispass != null">
+				ispass = #{ispass,jdbcType=INTEGER},
+			</if>
+			<if test="ipos != null">
+				ipos = #{ipos,jdbcType=VARCHAR},
+			</if>
+			<if test="comment != null">
+				comment = #{comment,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where icid = #{icid,jdbcType=INTEGER}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="com.ss.pojo.ImageComment">
+		update
+		image_comment
+		set uploadtime = #{uploadtime,jdbcType=TIMESTAMP},
+		ipos =
+		#{ipos,jdbcType=VARCHAR},
+		comment = #{comment,jdbcType=VARCHAR},
+		imga =
+		#{imga,jdbcType=VARCHAR},
+		imgb = #{imgb,jdbcType=VARCHAR},
+		imgc =
+		#{imgc,jdbcType=VARCHAR},
+		imgd = #{imgd,jdbcType=VARCHAR},
+		imge =
+		#{imge,jdbcType=VARCHAR},
+		imgf = #{imgf,jdbcType=VARCHAR},
+		buid =
+		#{buid,jdbcType=INTEGER},
+		zan = #{zan,jdbcType=INTEGER},
+		ispass =
+		#{ispass,jdbcType=INTEGER}
+		where icid
+		= #{icid,jdbcType=INTEGER}
+	</update>
+	
+	<update id="update4zan" parameterType="com.ss.pojo.ImageComment">
+		update
+		image_comment
+		set zan = #{zan,jdbcType=INTEGER}
+		where icid
+		= #{icid,jdbcType=INTEGER}
+	</update>
+</mapper>

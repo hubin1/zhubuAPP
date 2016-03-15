@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ss.dao.IGroupMemberShipDao">
+	<resultMap id="memResultMap" type="com.ss.pojo.Group_membership">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="buid" property="buid" jdbcType="INTEGER" />
+		<result column="omuid" property="omuid" jdbcType="INTEGER" />
+		<result column="om_ud_name" property="om_ud_name" jdbcType="VARCHAR" />
+		<result column="administrator" property="administrator" jdbcType="TINYINT" />
+		<result column="state" property="state" jdbcType="TINYINT" />
+		<result column="icon" property="icon" jdbcType="VARCHAR" />
+		<result column="phone" property="phone" jdbcType="VARCHAR" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="sex" property="sex" jdbcType="TINYINT" />
+	</resultMap>
+	<sql id="Org_Column_List">
+		id,buid,omuid,om_ud_name,administrator,state
+	</sql>
+	<select id="selectMember" parameterType="com.ss.pojo.Group_membership" resultMap="memResultMap">
+		select 
+		a.id,a.buid,a.omuid,a.om_ud_name,a.administrator,a.state,
+		b.phone,c.`name`,c.sex,b.icon from group_membership a 
+		LEFT JOIN baseinfo b on a.buid=b.buid 
+		LEFT JOIN baseinfo_detail c on b.buid=c.buid
+		where 
+		<trim  suffix=" " suffixOverrides="and">
+			<if test="omuid != null">
+				a.omuid=#{omuid,jdbcType=INTEGER} and
+			</if>
+			<if test="buid != null">
+				a.buid=#{buid,jdbcType=INTEGER} and
+			</if>
+		</trim>
+	</select>
+	<insert id="insertMember" parameterType="com.ss.pojo.Group_membership">
+		insert into group_membership ( buid,omuid,
+		<if test="om_ud_name != null">
+				om_ud_name,
+		</if>
+		administrator,state)
+		values (#{buid,jdbcType=INTEGER},
+		#{omuid,jdbcType=INTEGER},
+		<if test="om_ud_name != null">
+			#{om_ud_name,jdbcType=VARCHAR},
+		</if>
+		#{administrator,jdbcType=TINYINT}, 
+		#{state,jdbcType=TINYINT}
+		)
+		<selectKey resultType="Integer" order="AFTER" keyProperty="id">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+	<insert id="insertMemberBatch" parameterType="java.util.List">
+		insert into group_membership ( buid,omuid,administrator,state) values
+		<foreach collection="list" item="item"  index="index" separator="," >
+		(#{item.buid,jdbcType=INTEGER},#{item.omuid,jdbcType=INTEGER},#{item.administrator,jdbcType=TINYINT},#{item.state,jdbcType=TINYINT})
+		</foreach>
+	</insert>
+	<update id="updateMember" parameterType="com.ss.pojo.Group_membership">
+		update group_membership
+		<set>
+			<if test="om_ud_name != null">
+				om_ud_name = #{om_ud_name,jdbcType=VARCHAR},
+			</if>
+			<if test="administrator != null">
+				administrator = #{administrator,jdbcType=TINYINT},
+			</if>
+			<if test="state != null">
+				state = #{state,jdbcType=TINYINT},
+			</if>
+		</set>
+		where 
+		<trim  suffix=" " suffixOverrides="and">
+			<if test="id != null">
+				id = #{id,jdbcType=INTEGER} and
+			</if>
+			<if test="buid != null and omuid != null">
+				buid = #{buid,jdbcType=INTEGER} and omuid = #{omuid,jdbcType=INTEGER} and
+			</if>
+		</trim>
+	</update>
+	<delete id="deleteMember" parameterType="java.util.List">
+		delete from
+		group_membership
+		where id in
+		<foreach collection="list" index="index" item="model" open="(" separator="," close=")">
+			#{model.id,jdbcType=INTEGER}
+		</foreach>
+	</delete>
+</mapper>

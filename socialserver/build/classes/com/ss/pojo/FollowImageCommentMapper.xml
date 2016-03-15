@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ss.dao.IFollowImageCommentDAO" >
+  <resultMap id="BaseResultMap" type="com.ss.pojo.FollowImageComment" >
+    <id column="fid" property="fid" jdbcType="INTEGER" />
+    <result column="icid" property="icid" jdbcType="INTEGER" />
+    <result column="buid" property="buid" jdbcType="INTEGER" />
+    <result column="comment" property="comment" jdbcType="VARCHAR" />
+    <result column="uploadtime" property="uploadtime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    fid, icid, buid, comment, uploadtime
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from follow_image_comment
+    where fid = #{fid,jdbcType=INTEGER}
+  </select>
+  
+  <select id="selectByIcid" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from follow_image_comment
+    where icid = #{icid,jdbcType=INTEGER}
+  </select>
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from follow_image_comment
+    where fid = #{fid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.ss.pojo.FollowImageComment" >
+    insert into follow_image_comment (fid, icid, buid, 
+      comment, uploadtime)
+    values (#{fid,jdbcType=INTEGER}, #{icid,jdbcType=INTEGER}, #{buid,jdbcType=INTEGER}, 
+      #{comment,jdbcType=VARCHAR}, #{uploadtime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ss.pojo.FollowImageComment" >
+    insert into follow_image_comment
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="fid != null" >
+        fid,
+      </if>
+      <if test="icid != null" >
+        icid,
+      </if>
+      <if test="buid != null" >
+        buid,
+      </if>
+      <if test="comment != null" >
+        comment,
+      </if>
+      <if test="uploadtime != null" >
+        uploadtime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="fid != null" >
+        #{fid,jdbcType=INTEGER},
+      </if>
+      <if test="icid != null" >
+        #{icid,jdbcType=INTEGER},
+      </if>
+      <if test="buid != null" >
+        #{buid,jdbcType=INTEGER},
+      </if>
+      <if test="comment != null" >
+        #{comment,jdbcType=VARCHAR},
+      </if>
+      <if test="uploadtime != null" >
+        #{uploadtime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ss.pojo.FollowImageComment" >
+    update follow_image_comment
+    <set >
+      <if test="icid != null" >
+        icid = #{icid,jdbcType=INTEGER},
+      </if>
+      <if test="buid != null" >
+        buid = #{buid,jdbcType=INTEGER},
+      </if>
+      <if test="comment != null" >
+        comment = #{comment,jdbcType=VARCHAR},
+      </if>
+      <if test="uploadtime != null" >
+        uploadtime = #{uploadtime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where fid = #{fid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ss.pojo.FollowImageComment" >
+    update follow_image_comment
+    set icid = #{icid,jdbcType=INTEGER},
+      buid = #{buid,jdbcType=INTEGER},
+      comment = #{comment,jdbcType=VARCHAR},
+      uploadtime = #{uploadtime,jdbcType=TIMESTAMP}
+    where fid = #{fid,jdbcType=INTEGER}
+  </update>
+</mapper>

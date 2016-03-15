@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ss.dao.IFriendRelationshipDAO">
+	<resultMap id="BaseResultMap" type="com.ss.pojo.FriendRelationship">
+		<result column="buid" property="buid" jdbcType="INTEGER" />
+		<result column="refid" property="refid" jdbcType="INTEGER" />
+		<result column="bind" property="bind" jdbcType="INTEGER" />
+		<result column="comfirmtime" property="comfirmtime" jdbcType="TIMESTAMP" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		buid, refid, bind, comfirmtime
+	</sql>
+
+	<select id="selectByBUID" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from baseinfo where buid = #{buid,jdbcType=INTEGER}
+	</select>
+
+	<insert id="insert" parameterType="com.ss.pojo.FriendRelationship">
+		insert into friend_relationship (buid, refid, bind,
+		comfirmtime)
+		values (#{buid,jdbcType=INTEGER}, #{refid,jdbcType=INTEGER},
+		#{bind,jdbcType=INTEGER},
+		#{comfirmtime,jdbcType=TIMESTAMP})
+	</insert>
+	<insert id="insertSelective" parameterType="com.ss.pojo.FriendRelationship">
+		insert into friend_relationship
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="buid != null">
+				buid,
+			</if>
+			<if test="refid != null">
+				refid,
+			</if>
+			<if test="bind != null">
+				bind,
+			</if>
+			<if test="comfirmtime != null">
+				comfirmtime,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="buid != null">
+				#{buid,jdbcType=INTEGER},
+			</if>
+			<if test="refid != null">
+				#{refid,jdbcType=INTEGER},
+			</if>
+			<if test="bind != null">
+				#{bind,jdbcType=INTEGER},
+			</if>
+			<if test="comfirmtime != null">
+				#{comfirmtime,jdbcType=TIMESTAMP},
+			</if>
+		</trim>
+	</insert>
+</mapper>

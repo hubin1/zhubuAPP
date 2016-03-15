@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ss.dao.INotificationDAO" >
+  <resultMap id="BaseResultMap" type="com.ss.pojo.Notification" >
+    <id column="nid" property="nid" jdbcType="INTEGER" />
+    <result column="ntime" property="ntime" jdbcType="TIMESTAMP" />
+    <result column="reason" property="reason" jdbcType="INTEGER" />
+    <result column="buid" property="buid" jdbcType="INTEGER" />
+    <result column="type" property="type" jdbcType="INTEGER" />
+    <result column="refid" property="refid" jdbcType="INTEGER" />
+    <result column="msg" property="msg" jdbcType="VARCHAR" />
+    <result column="fillA" property="filla" jdbcType="VARCHAR" />
+    <result column="fillB" property="fillb" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    nid, ntime, reason, buid, type, refid, msg, fillA, fillB
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from notification
+    where nid = #{nid,jdbcType=INTEGER}
+  </select>
+  
+  <select id="selectByBUID" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    nid, ntime, reason, buid, type, refid, msg
+    from notification where buid = #{buid,jdbcType=INTEGER}
+  </select>
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from notification
+    where nid = #{nid,jdbcType=INTEGER}
+  </delete>
+  <delete id="delete" parameterType="com.ss.pojo.Notification" >
+    delete from notification
+    where nid = #{nid,jdbcType=INTEGER} 
+    AND
+    buid = #{buid,jdbcType=INTEGER} 
+  </delete>
+  <insert id="insert" parameterType="com.ss.pojo.Notification" >
+    insert into notification (nid, ntime, reason, 
+      buid, type, refid, 
+      msg, fillA, fillB)
+    values (#{nid,jdbcType=INTEGER}, #{ntime,jdbcType=TIMESTAMP}, #{reason,jdbcType=INTEGER}, 
+      #{buid,jdbcType=INTEGER}, #{type,jdbcType=INTEGER}, #{refid,jdbcType=INTEGER}, 
+      #{msg,jdbcType=VARCHAR}, #{filla,jdbcType=VARCHAR}, #{fillb,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ss.pojo.Notification" >
+    insert into notification
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="nid != null" >
+        nid,
+      </if>
+      <if test="ntime != null" >
+        ntime,
+      </if>
+      <if test="reason != null" >
+        reason,
+      </if>
+      <if test="buid != null" >
+        buid,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="refid != null" >
+        refid,
+      </if>
+      <if test="msg != null" >
+        msg,
+      </if>
+      <if test="filla != null" >
+        fillA,
+      </if>
+      <if test="fillb != null" >
+        fillB,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="nid != null" >
+        #{nid,jdbcType=INTEGER},
+      </if>
+      <if test="ntime != null" >
+        #{ntime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="reason != null" >
+        #{reason,jdbcType=INTEGER},
+      </if>
+      <if test="buid != null" >
+        #{buid,jdbcType=INTEGER},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=INTEGER},
+      </if>
+      <if test="refid != null" >
+        #{refid,jdbcType=INTEGER},
+      </if>
+      <if test="msg != null" >
+        #{msg,jdbcType=VARCHAR},
+      </if>
+      <if test="filla != null" >
+        #{filla,jdbcType=VARCHAR},
+      </if>
+      <if test="fillb != null" >
+        #{fillb,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ss.pojo.Notification" >
+    update notification
+    <set >
+      <if test="ntime != null" >
+        ntime = #{ntime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="reason != null" >
+        reason = #{reason,jdbcType=INTEGER},
+      </if>
+      <if test="buid != null" >
+        buid = #{buid,jdbcType=INTEGER},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="refid != null" >
+        refid = #{refid,jdbcType=INTEGER},
+      </if>
+      <if test="msg != null" >
+        msg = #{msg,jdbcType=VARCHAR},
+      </if>
+      <if test="filla != null" >
+        fillA = #{filla,jdbcType=VARCHAR},
+      </if>
+      <if test="fillb != null" >
+        fillB = #{fillb,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where nid = #{nid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ss.pojo.Notification" >
+    update notification
+    set ntime = #{ntime,jdbcType=TIMESTAMP},
+      reason = #{reason,jdbcType=INTEGER},
+      buid = #{buid,jdbcType=INTEGER},
+      type = #{type,jdbcType=INTEGER},
+      refid = #{refid,jdbcType=INTEGER},
+      msg = #{msg,jdbcType=VARCHAR},
+      fillA = #{filla,jdbcType=VARCHAR},
+      fillB = #{fillb,jdbcType=VARCHAR}
+    where nid = #{nid,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ss.dao.IComment_activityDAO">
+	<resultMap id="commentResultMap" type="com.ss.pojo.Comment_activity">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="buid" property="buid" jdbcType="INTEGER" />
+		<result column="moauid" property="moauid" jdbcType="INTEGER" />
+		<result column="contentValue" property="contentValue" jdbcType="VARCHAR" />
+		<result column="time" property="time" jdbcType="TIMESTAMP" />
+		<result column="state" property="state" jdbcType="TINYINT" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="icon" property="icon" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="Comment_Column_List">
+		id,buid,moauid,contentValue,time,state
+	</sql>
+	<select id="selectComment" parameterType="com.ss.pojo.Comment_activity" resultMap="commentResultMap">
+		select a.id,a.buid,a.moauid,a.contentValue,a.time,a.state,b.icon,c.`name` from (
+			select <include refid="Comment_Column_List" /> from comment_activity 
+			where moauid=#{moauid,jdbcType=INTEGER}
+		) a
+		LEFT JOIN baseinfo b on a.buid=b.buid
+		LEFT JOIN baseinfo_detail c on c.buid=b.buid
+		order by a.time limit #{currentPage,jdbcType=INTEGER}, #{number,jdbcType=INTEGER}
+	</select>
+	<insert id="insertComment" parameterType="com.ss.pojo.Comment_activity">
+		insert into comment_activity (buid,moauid,contentValue,time)
+		values (
+		#{buid,jdbcType=INTEGER},#{moauid,jdbcType=INTEGER},
+		#{contentValue,jdbcType=VARCHAR},
+		#{time,jdbcType=TIMESTAMP}
+		)
+		<selectKey resultType="Integer" order="AFTER" keyProperty="id">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+</mapper>

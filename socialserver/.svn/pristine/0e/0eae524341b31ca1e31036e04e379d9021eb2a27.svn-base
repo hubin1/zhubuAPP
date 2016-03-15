@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="./regist.do" method="POST">
+		<input name="phone" id="phone" type="text"/>
+		<a href="javascript:0;" onclick="getValidCode()">click</a>
+		<br/>
+		ValidCode:<input name="vcode" type="text"/>
+		<br/>
+		
+		Password:<input name="password" type="password"/>
+		<br/>
+		NickName:<input name="nick" type="text"/>
+		<br/>
+		<input type="submit"/>
+		
+	</form>
+	
+	<script type="text/javascript">
+		function getValidCode(){
+			var request;
+			request = new XMLHttpRequest();
+			
+			var phone = document.getElementById("phone").value;
+			
+			request.open("GET","./sendcode.do?phone="+phone,true);
+			request.onreadystatechange = function(){
+				if(request.readyState == 4 && request.status == 200){
+					alert(request.responseText);
+				}
+			}
+			request.send();
+		}
+	</script>
+</body>
+</html>

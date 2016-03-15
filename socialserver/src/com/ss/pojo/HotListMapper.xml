@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ss.dao.IHotListDAO">
+	<resultMap id="BaseResultMap" type="com.ss.pojo.HotList">
+		<id column="hid" property="hid" jdbcType="INTEGER" />
+		<result column="buid" property="buid" jdbcType="INTEGER" />
+		<result column="vid" property="vid" jdbcType="INTEGER" />
+		<result column="review" property="review" jdbcType="BIGINT" />
+		<result column="confirmtime" property="confirmtime" jdbcType="TIMESTAMP" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		hid, buid, vid, review, confirmtime
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from hotlist
+		where hid = #{hid,jdbcType=INTEGER}
+	</select>
+	<select id="selectAll" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from hotlist
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+		delete from hotlist
+		where hid = #{hid,jdbcType=INTEGER}
+	</delete>
+	<insert id="insert" parameterType="com.ss.pojo.HotList">
+		insert into hotlist (hid, buid, vid,
+		review, confirmtime)
+		values (#{hid,jdbcType=INTEGER}, #{buid,jdbcType=INTEGER},
+		#{vid,jdbcType=INTEGER},
+		#{review,jdbcType=BIGINT}, #{confirmtime,jdbcType=TIMESTAMP})
+	</insert>
+	<insert id="insertSelective" parameterType="com.ss.pojo.HotList">
+		insert into hotlist
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="hid != null">
+				hid,
+			</if>
+			<if test="buid != null">
+				buid,
+			</if>
+			<if test="vid != null">
+				vid,
+			</if>
+			<if test="review != null">
+				review,
+			</if>
+			<if test="confirmtime != null">
+				confirmtime,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="hid != null">
+				#{hid,jdbcType=INTEGER},
+			</if>
+			<if test="buid != null">
+				#{buid,jdbcType=INTEGER},
+			</if>
+			<if test="vid != null">
+				#{vid,jdbcType=INTEGER},
+			</if>
+			<if test="review != null">
+				#{review,jdbcType=BIGINT},
+			</if>
+			<if test="confirmtime != null">
+				#{confirmtime,jdbcType=TIMESTAMP},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective" parameterType="com.ss.pojo.HotList">
+		update hotlist
+		<set>
+			<if test="buid != null">
+				buid = #{buid,jdbcType=INTEGER},
+			</if>
+			<if test="vid != null">
+				vid = #{vid,jdbcType=INTEGER},
+			</if>
+			<if test="review != null">
+				review = #{review,jdbcType=BIGINT},
+			</if>
+			<if test="confirmtime != null">
+				confirmtime = #{confirmtime,jdbcType=TIMESTAMP},
+			</if>
+		</set>
+		where hid = #{hid,jdbcType=INTEGER}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="com.ss.pojo.HotList">
+		update hotlist
+		set buid = #{buid,jdbcType=INTEGER},
+		vid = #{vid,jdbcType=INTEGER},
+		review = #{review,jdbcType=BIGINT},
+		confirmtime = #{confirmtime,jdbcType=TIMESTAMP}
+		where hid = #{hid,jdbcType=INTEGER}
+	</update>
+</mapper>

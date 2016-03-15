@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-4.0.xsd 
+	http://www.springframework.org/schema/mvc 
+	http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+
+	<!-- 开启注解配置 -->
+	<context:annotation-config />
+	<!-- 仅仅扫描 service 为开启事物做准备 -->
+	<context:component-scan base-package="com.ss.serviceImpl" />
+
+	<!-- 读取配置文件 -->
+	<bean id="configer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="classpath:jdbc.properties"></property>
+	</bean>
+
+
+	<!-- 使用 dbcp2 来管理 数据库连接 -->
+	<bean id="ssdataSource" class="org.apache.commons.dbcp2.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${driver}"></property>
+		<property name="username" value="${username}"></property>
+		<property name="password" value="${password}"></property>
+		<property name="initialSize" value="${initialSize}"></property>
+		<property name="url" value="${url}"></property>
+		<property name="maxTotal" value="${maxTotal}"></property>
+		<property name="maxIdle" value="${maxIdle}"></property>
+		<property name="minIdle" value="${minIdle}"></property>
+		<property name="maxWaitMillis" value="${maxWait}"></property>
+		<property name="defaultAutoCommit" value="false"></property>
+		<!-- 连接空闲后一段时间 被逐出连接池的时间 毫秒 -->
+		<property name="minEvictableIdleTimeMillis" value="120000"></property>
+
+		<!-- 超过时间限制，回收没有用(废弃)的连接 秒 -->
+		<!-- <property name="removeAbandonedTimeout" value="180"></property> <property 
+			name="removeAbandonedOnBorrow" value="true"></property> -->
+
+		<!-- sql 心跳 -->
+		<property name="testWhileIdle" value="true" />
+		<property name="testOnBorrow" value="false" />
+		<property name="testOnReturn" value="false" />
+		<property name="validationQuery" value="select 1" />
+		<property name="validationQueryTimeout" value="1" />
+		<property name="timeBetweenEvictionRunsMillis" value="60000" />
+		<property name="numTestsPerEvictionRun" value="${maxTotal}" />
+	</bean>
+
+
+	<!-- mybatis 持久化实例 准备 所有的 DAO 对象 -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="ssdataSource"></property>
+		<!-- 读取配置文件 -->
+		<property name="mapperLocations" value="classpath:com/ss/pojo/*.xml" />
+		<!-- 带入 第三方的 分页工具 -->
+		<property name="typeAliasesPackage" value="com.ss.pojo" />
+		<property name="plugins">
+			<array>
+				<bean class="com.github.pagehelper.PageHelper">
+					<property name="properties">
+						<value>
+							dialect=mysql
+						</value>
+					</property>
+				</bean>
+			</array>
+		</property>
+	</bean>
+
+	<!-- 查找 DAO 并将其 放入 spring 容器中便于管理 -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.ss.dao" />
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
+	</bean>
+	
+	<!-- spring 事务声明 -->
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="ssdataSource"></property>
+	</bean>
+
+	<!-- 事务注解驱动，标注@Transactional的类和方法将具有事务性 -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+	<!-- 统一的异常处理 -->
+	<bean
+		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="exceptionAttribute" value="ex"></property>
+		<property name="exceptionMappings">
+			<props>
+				<prop key="java.lang.RuntimeException">error</prop>
+			</props>
+		</property>
+	</bean>
+
+
+</beans>
