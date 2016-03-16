@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 222
+/svn/%E5%BE%AE%E4%BF%A1%E8%87%AA%E5%BB%BA%E7%AB%99/!svn/ver/156/%E8%8B%8F%E9%9F%AC%E5%BE%8B%E5%B8%88%E4%BA%8B%E5%8A%A1%E6%89%80/%E5%BE%AE%E4%BF%A1%E5%85%AC%E5%85%B1%E6%9C%8D%E5%8A%A1%E5%B9%B3%E5%8F%B0%E6%8E%A5%E5%8F%A3/lib
+END
+ojdbc14_g.jar
+K 25
+svn:wc:ra_dav:version-url
+V 236
+/svn/%E5%BE%AE%E4%BF%A1%E8%87%AA%E5%BB%BA%E7%AB%99/!svn/ver/148/%E8%8B%8F%E9%9F%AC%E5%BE%8B%E5%B8%88%E4%BA%8B%E5%8A%A1%E6%89%80/%E5%BE%AE%E4%BF%A1%E5%85%AC%E5%85%B1%E6%9C%8D%E5%8A%A1%E5%B9%B3%E5%8F%B0%E6%8E%A5%E5%8F%A3/lib/ojdbc14_g.jar
+END
+jdom.jar
+K 25
+svn:wc:ra_dav:version-url
+V 231
+/svn/%E5%BE%AE%E4%BF%A1%E8%87%AA%E5%BB%BA%E7%AB%99/!svn/ver/148/%E8%8B%8F%E9%9F%AC%E5%BE%8B%E5%B8%88%E4%BA%8B%E5%8A%A1%E6%89%80/%E5%BE%AE%E4%BF%A1%E5%85%AC%E5%85%B1%E6%9C%8D%E5%8A%A1%E5%B9%B3%E5%8F%B0%E6%8E%A5%E5%8F%A3/lib/jdom.jar
+END
+jackson-all-1.8.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 244
+/svn/%E5%BE%AE%E4%BF%A1%E8%87%AA%E5%BB%BA%E7%AB%99/!svn/ver/154/%E8%8B%8F%E9%9F%AC%E5%BE%8B%E5%B8%88%E4%BA%8B%E5%8A%A1%E6%89%80/%E5%BE%AE%E4%BF%A1%E5%85%AC%E5%85%B1%E6%9C%8D%E5%8A%A1%E5%B9%B3%E5%8F%B0%E6%8E%A5%E5%8F%A3/lib/jackson-all-1.8.3.jar
+END
+jaxen-core.jar
+K 25
+svn:wc:ra_dav:version-url
+V 237
+/svn/%E5%BE%AE%E4%BF%A1%E8%87%AA%E5%BB%BA%E7%AB%99/!svn/ver/148/%E8%8B%8F%E9%9F%AC%E5%BE%8B%E5%B8%88%E4%BA%8B%E5%8A%A1%E6%89%80/%E5%BE%AE%E4%BF%A1%E5%85%AC%E5%85%B1%E6%9C%8D%E5%8A%A1%E5%B9%B3%E5%8F%B0%E6%8E%A5%E5%8F%A3/lib/jaxen-core.jar
+END
+haocom.config.jar
+K 25
+svn:wc:ra_dav:version-url
+V 240
+/svn/%E5%BE%AE%E4%BF%A1%E8%87%AA%E5%BB%BA%E7%AB%99/!svn/ver/151/%E8%8B%8F%E9%9F%AC%E5%BE%8B%E5%B8%88%E4%BA%8B%E5%8A%A1%E6%89%80/%E5%BE%AE%E4%BF%A1%E5%85%AC%E5%85%B1%E6%9C%8D%E5%8A%A1%E5%B9%B3%E5%8F%B0%E6%8E%A5%E5%8F%A3/lib/haocom.config.jar
+END
+haocom.log4j.logger.jar
+K 25
+svn:wc:ra_dav:version-url
+V 246
+/svn/%E5%BE%AE%E4%BF%A1%E8%87%AA%E5%BB%BA%E7%AB%99/!svn/ver/156/%E8%8B%8F%E9%9F%AC%E5%BE%8B%E5%B8%88%E4%BA%8B%E5%8A%A1%E6%89%80/%E5%BE%AE%E4%BF%A1%E5%85%AC%E5%85%B1%E6%9C%8D%E5%8A%A1%E5%B9%B3%E5%8F%B0%E6%8E%A5%E5%8F%A3/lib/haocom.log4j.logger.jar
+END
+base_util.jar
+K 25
+svn:wc:ra_dav:version-url
+V 236
+/svn/%E5%BE%AE%E4%BF%A1%E8%87%AA%E5%BB%BA%E7%AB%99/!svn/ver/148/%E8%8B%8F%E9%9F%AC%E5%BE%8B%E5%B8%88%E4%BA%8B%E5%8A%A1%E6%89%80/%E5%BE%AE%E4%BF%A1%E5%85%AC%E5%85%B1%E6%9C%8D%E5%8A%A1%E5%B9%B3%E5%8F%B0%E6%8E%A5%E5%8F%A3/lib/base_util.jar
+END
+com.haocom.http_server2.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 252
+/svn/%E5%BE%AE%E4%BF%A1%E8%87%AA%E5%BB%BA%E7%AB%99/!svn/ver/148/%E8%8B%8F%E9%9F%AC%E5%BE%8B%E5%B8%88%E4%BA%8B%E5%8A%A1%E6%89%80/%E5%BE%AE%E4%BF%A1%E5%85%AC%E5%85%B1%E6%9C%8D%E5%8A%A1%E5%B9%B3%E5%8F%B0%E6%8E%A5%E5%8F%A3/lib/com.haocom.http_server2.0.jar
+END
+log4j-1.2.15.jar
+K 25
+svn:wc:ra_dav:version-url
+V 239
+/svn/%E5%BE%AE%E4%BF%A1%E8%87%AA%E5%BB%BA%E7%AB%99/!svn/ver/148/%E8%8B%8F%E9%9F%AC%E5%BE%8B%E5%B8%88%E4%BA%8B%E5%8A%A1%E6%89%80/%E5%BE%AE%E4%BF%A1%E5%85%AC%E5%85%B1%E6%9C%8D%E5%8A%A1%E5%B9%B3%E5%8F%B0%E6%8E%A5%E5%8F%A3/lib/log4j-1.2.15.jar
+END

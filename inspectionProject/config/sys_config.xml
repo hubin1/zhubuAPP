@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="GB18030"?>
+<project name="接口基本配置">	
+
+	<!-- 字符集 -->
+	<property name="encoding">UTF-8</property>
+    
+
+	<!-- 服务配置文件地址 -->
+	<property name="service_config_file">config/http_service.xml</property>
+	
+</project>

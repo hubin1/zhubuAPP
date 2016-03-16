@@ -1,0 +1,195 @@
+2016-03-11 18:31:15,525 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-11 18:31:15,525 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-11 18:31:15,614 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-11 18:31:15,614 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-11 18:31:15,630 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-11 18:31:15,630 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-11 18:31:15,631 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-11 18:31:15,631 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-11 18:31:15,631 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-11 18:31:15,632 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-11 18:31:15,632 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-11 18:31:15,632 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-11 18:31:15,758 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-11 18:37:46,166 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-11 18:37:46,167 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-11 18:37:46,302 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-11 18:37:46,303 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-11 18:37:46,322 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-11 18:37:46,323 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-11 18:37:46,323 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-11 18:37:46,323 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-11 18:37:46,323 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-11 18:37:46,323 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-11 18:37:46,323 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-11 18:37:46,323 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-11 18:37:46,479 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-11 18:40:23,207 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-11 18:40:23,208 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-11 18:40:23,291 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-11 18:40:23,291 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-11 18:40:23,305 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-11 18:40:23,306 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-11 18:40:23,306 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-11 18:40:23,306 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-11 18:40:23,306 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-11 18:40:23,306 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-11 18:40:23,306 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-11 18:40:23,307 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-11 18:40:23,429 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-11 19:08:39,250 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-11 19:08:39,251 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-11 19:08:39,358 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-11 19:08:39,359 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-11 19:08:39,373 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-11 19:08:39,373 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-11 19:08:39,373 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-11 19:08:39,374 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-11 19:08:39,374 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-11 19:08:39,374 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-11 19:08:39,374 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-11 19:08:39,374 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-11 19:08:39,506 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-11 19:22:13,655 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-11 19:22:13,656 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-11 19:22:13,739 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-11 19:22:13,739 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-11 19:22:13,752 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-11 19:22:13,753 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-11 19:22:13,753 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-11 19:22:13,753 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-11 19:22:13,753 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-11 19:22:13,753 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-11 19:22:13,753 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-11 19:22:13,754 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-11 19:22:13,872 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-11 19:35:34,918 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-11 19:35:34,919 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-11 19:35:35,020 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-11 19:35:35,020 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-11 19:35:35,034 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-11 19:35:35,034 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-11 19:35:35,034 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-11 19:35:35,035 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-11 19:35:35,035 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-11 19:35:35,035 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-11 19:35:35,035 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-11 19:35:35,035 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-11 19:35:35,179 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-11 19:58:28,960 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-11 19:58:28,961 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-11 19:58:29,074 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-11 19:58:29,075 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-11 19:58:29,090 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-11 19:58:29,090 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-11 19:58:29,090 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-11 19:58:29,090 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-11 19:58:29,090 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-11 19:58:29,091 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-11 19:58:29,091 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-11 19:58:29,091 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-11 19:58:29,247 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-11 20:06:17,734 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-11 20:06:17,735 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-11 20:06:17,825 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-11 20:06:17,825 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-11 20:06:17,834 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-11 20:06:17,835 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-11 20:06:17,835 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-11 20:06:17,835 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-11 20:06:17,835 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-11 20:06:17,835 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-11 20:06:17,835 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-11 20:06:17,835 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-11 20:06:17,953 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-11 20:07:32,776 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-11 20:07:32,777 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-11 20:07:32,854 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-11 20:07:32,854 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-11 20:07:32,864 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-11 20:07:32,864 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-11 20:07:32,864 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-11 20:07:32,864 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-11 20:07:32,864 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-11 20:07:32,865 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-11 20:07:32,865 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-11 20:07:32,865 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-11 20:07:32,981 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-11 20:15:51,043 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-11 20:15:51,044 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-11 20:15:51,132 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-11 20:15:51,132 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-11 20:15:51,140 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-11 20:15:51,140 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-11 20:15:51,141 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-11 20:15:51,141 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-11 20:15:51,141 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-11 20:15:51,141 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-11 20:15:51,141 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-11 20:15:51,141 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-11 20:15:51,261 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-11 20:23:57,917 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-11 20:23:57,918 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-11 20:23:58,017 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-11 20:23:58,018 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-11 20:23:58,030 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-11 20:23:58,030 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-11 20:23:58,030 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-11 20:23:58,030 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-11 20:23:58,030 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-11 20:23:58,030 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-11 20:23:58,031 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-11 20:23:58,031 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-11 20:23:58,198 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-11 20:27:22,028 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-11 20:27:22,029 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-11 20:27:22,136 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-11 20:27:22,137 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-11 20:27:22,150 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-11 20:27:22,150 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-11 20:27:22,150 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-11 20:27:22,150 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-11 20:27:22,150 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-11 20:27:22,150 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-11 20:27:22,150 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-11 20:27:22,151 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-11 20:27:22,312 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-11 20:30:45,134 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-11 20:30:45,135 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-11 20:30:45,244 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-11 20:30:45,244 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-11 20:30:45,257 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-11 20:30:45,257 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-11 20:30:45,257 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-11 20:30:45,257 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-11 20:30:45,257 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-11 20:30:45,257 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-11 20:30:45,258 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-11 20:30:45,258 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-11 20:30:45,419 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-11 20:31:57,925 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-11 20:31:57,926 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-11 20:31:58,029 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-11 20:31:58,029 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-11 20:31:58,044 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-11 20:31:58,044 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-11 20:31:58,044 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-11 20:31:58,044 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-11 20:31:58,044 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-11 20:31:58,045 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-11 20:31:58,045 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-11 20:31:58,045 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-11 20:31:58,206 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-11 20:38:58,864 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-11 20:38:58,865 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-11 20:38:58,959 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-11 20:38:58,959 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-11 20:38:58,972 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-11 20:38:58,972 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-11 20:38:58,972 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-11 20:38:58,972 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-11 20:38:58,972 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-11 20:38:58,972 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-11 20:38:58,972 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-11 20:38:58,973 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-11 20:38:59,123 com.org.inspection.http_inferface.Service 接口启动成功

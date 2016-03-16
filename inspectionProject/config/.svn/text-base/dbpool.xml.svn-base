@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!-- 数据库连接池,支持连接多种不同类型数据库 -->
+<dbm>
+	<logFile>log/db.log</logFile>
+	<pool>
+		<!-- 连接池名称 -->
+		<name>1st</name>
+		<!-- 驱动 -->
+		<driver>oracle.jdbc.driver.OracleDriver</driver>
+		<!-- 数据库url -->
+		<url>jdbc:oracle:thin:@192.168.5.239:1521:orcl</url>
+		<!-- 用户名 -->
+		<user>yun</user>
+		<!-- 密码 -->
+		<password>yunpass</password>
+		<!-- 最大链接数 -->
+		<maxConn>3</maxConn>
+		<!-- 最小链接数 -->
+		<minConn>3</minConn>
+		<!-- 初始链接数 -->
+		<defConn>3</defConn>
+	</pool>
+</dbm>

@@ -1,0 +1,110 @@
+2016-03-11 18:37:29,253 OrderSuccess 位置定位查找user请求：
+2016-03-11 18:37:29,254 OrderSuccess key=latitude value=12&&key=longitude value=11&&
+2016-03-11 18:38:11,322 OrderSuccess 位置定位查找user请求：
+2016-03-11 18:38:11,772 OrderSuccess key=latitude value=12&&key=longitude value=11&&
+2016-03-11 18:38:49,153 OrderSuccess 二维码请求：
+2016-03-11 18:38:49,154 OrderSuccess key=pointid value=1&&
+2016-03-11 18:41:40,582 OrderSuccess 位置定位查找user请求：
+2016-03-11 18:41:40,583 OrderSuccess 
+2016-03-11 19:09:20,100 OrderSuccess 位置定位查找user请求：
+2016-03-11 19:09:20,100 OrderSuccess 
+2016-03-11 19:12:47,131 OrderSuccess 位置定位查找user请求：
+2016-03-11 19:12:47,132 OrderSuccess 
+2016-03-11 19:17:06,964 OrderSuccess 位置定位查找user请求：
+2016-03-11 19:17:06,965 OrderSuccess 
+2016-03-11 19:20:14,158 OrderSuccess 位置定位查找user请求：
+2016-03-11 19:20:14,159 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 19:21:08,911 OrderSuccess 位置定位查找user请求：
+2016-03-11 19:21:08,912 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 19:22:22,908 OrderSuccess 位置定位查找user请求：
+2016-03-11 19:22:22,908 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 19:22:38,222 OrderSuccess 位置定位查找user请求：
+2016-03-11 19:22:38,222 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 19:22:58,971 OrderSuccess 位置定位查找user请求：
+2016-03-11 19:22:58,972 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 19:23:31,906 OrderSuccess 位置定位查找user请求：
+2016-03-11 19:23:31,907 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 19:32:35,850 OrderSuccess 位置定位查找user请求：
+2016-03-11 19:32:35,850 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 19:33:17,806 OrderSuccess 位置定位查找user请求：
+2016-03-11 19:33:17,806 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 19:34:10,996 OrderSuccess 位置定位查找user请求：
+2016-03-11 19:34:10,997 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 19:35:42,014 OrderSuccess 位置定位查找user请求：
+2016-03-11 19:35:42,015 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 19:37:29,825 OrderSuccess 位置定位查找user请求：
+2016-03-11 19:37:29,829 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 19:38:55,346 OrderSuccess 位置定位查找user请求：
+2016-03-11 19:38:55,350 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 19:40:26,445 OrderSuccess 位置定位查找user请求：
+2016-03-11 19:40:26,445 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 19:41:02,070 OrderSuccess 位置定位查找user请求：
+2016-03-11 19:41:02,076 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 19:41:32,259 OrderSuccess 位置定位查找user请求：
+2016-03-11 19:41:32,259 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 19:42:09,728 OrderSuccess 位置定位查找user请求：
+2016-03-11 19:42:09,729 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 19:42:15,120 OrderSuccess 位置定位查找user请求：
+2016-03-11 19:42:15,121 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 19:42:24,238 OrderSuccess 位置定位查找user请求：
+2016-03-11 19:42:24,238 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 19:54:33,999 OrderSuccess 位置定位查找user请求：
+2016-03-11 19:54:34,000 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 19:54:56,742 OrderSuccess 位置定位查找user请求：
+2016-03-11 19:54:56,743 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 19:55:05,095 OrderSuccess 位置定位查找user请求：
+2016-03-11 19:55:05,096 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 19:55:44,942 OrderSuccess 位置定位查找user请求：
+2016-03-11 19:55:44,943 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 19:56:43,085 OrderSuccess 位置定位查找user请求：
+2016-03-11 19:56:43,085 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 20:05:01,561 OrderSuccess 位置定位查找user请求：
+2016-03-11 20:05:01,562 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 20:05:28,356 OrderSuccess 位置定位查找user请求：
+2016-03-11 20:05:28,357 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 20:06:23,303 OrderSuccess 位置定位查找user请求：
+2016-03-11 20:06:23,303 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 20:06:30,885 OrderSuccess 位置定位查找user请求：
+2016-03-11 20:06:30,885 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 20:06:35,485 OrderSuccess 位置定位查找user请求：
+2016-03-11 20:06:35,485 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 20:09:16,223 OrderSuccess 位置定位查找user请求：
+2016-03-11 20:09:16,223 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 20:09:19,281 OrderSuccess 位置定位查找user请求：
+2016-03-11 20:09:19,281 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 20:09:25,639 OrderSuccess 位置定位查找user请求：
+2016-03-11 20:09:25,641 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&
+2016-03-11 20:09:38,214 OrderSuccess 签到请求：
+2016-03-11 20:09:38,214 OrderSuccess 
+2016-03-11 20:15:57,001 OrderSuccess 签到请求：
+2016-03-11 20:15:57,001 OrderSuccess key=stats value=0&&key=latitude value=32.071932&&key=userid value=1&&key=longitude value=118.654241&&
+2016-03-11 20:20:31,447 OrderSuccess 签到请求：
+2016-03-11 20:20:31,448 OrderSuccess 
+2016-03-11 20:22:11,380 OrderSuccess 签到请求：
+2016-03-11 20:22:11,380 OrderSuccess key=stats value=0&&key=latitude value=32.005086&&key=userid value=1&&key=longitude value=118.820945&&
+2016-03-11 20:24:12,565 OrderSuccess 签到请求：
+2016-03-11 20:24:12,812 OrderSuccess key=stats value=0&&key=latitude value=32.005086&&key=userid value=1&&key=longitude value=118.820945&&
+2016-03-11 20:25:19,141 OrderSuccess 签到请求：
+2016-03-11 20:25:19,434 OrderSuccess key=stats value=0&&key=latitude value=32.005086&&key=userid value=1&&key=longitude value=118.820945&&
+2016-03-11 20:27:38,151 OrderSuccess 签到请求：
+2016-03-11 20:27:38,381 OrderSuccess key=stats value=0&&key=latitude value=32.005086&&key=userid value=2&&key=longitude value=118.820945&&
+2016-03-11 20:28:36,735 OrderSuccess 签到请求：
+2016-03-11 20:28:36,738 OrderSuccess key=stats value=0&&key=latitude value=32.005086&&key=userid value=2&&key=longitude value=118.820945&&
+2016-03-11 20:32:08,997 OrderSuccess 签到请求：
+2016-03-11 20:32:08,998 OrderSuccess key=stats value=0&&key=latitude value=32.005086&&key=userid value=2&&key=longitude value=118.820945&&
+2016-03-11 20:34:36,418 OrderSuccess 签到请求：
+2016-03-11 20:34:36,419 OrderSuccess key=stats value=0&&key=latitude value=32.005086&&key=userid value=2&&key=longitude value=118.820945&&
+2016-03-11 20:37:58,344 OrderSuccess 签到请求：
+2016-03-11 20:37:58,344 OrderSuccess key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-11 20:38:14,108 OrderSuccess 签到请求：
+2016-03-11 20:38:14,108 OrderSuccess key=stats value=0&&key=latitude value=32.005086&&key=userid value=2&&key=longitude value=118.820945&&
+2016-03-11 20:38:36,384 OrderSuccess 签到请求：
+2016-03-11 20:38:36,387 OrderSuccess key=stats value=0&&key=latitude value=32.005086&&key=userid value=2&&key=longitude value=118.820945&&
+2016-03-11 20:39:04,518 OrderSuccess 签到请求：
+2016-03-11 20:39:04,519 OrderSuccess key=stats value=0&&key=latitude value=32.005086&&key=userid value=2&&key=longitude value=118.820945&&
+2016-03-11 20:39:37,760 OrderSuccess 签到请求：
+2016-03-11 20:39:37,761 OrderSuccess key=stats value=0&&key=latitude value=32.005086&&key=userid value=2&&key=longitude value=118.820945&&
+2016-03-11 20:39:53,672 OrderSuccess 签到请求：
+2016-03-11 20:39:53,672 OrderSuccess key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-11 20:40:04,457 OrderSuccess 位置定位查找user请求：
+2016-03-11 20:40:04,457 OrderSuccess key=latitude value=32.005086&&key=longitude value=118.820945&&

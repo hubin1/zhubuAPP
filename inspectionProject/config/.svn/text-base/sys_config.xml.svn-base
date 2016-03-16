@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="GB18030"?>
+<project name="接口基本配置">	
+
+	<!-- 字符集 -->
+	<property name="encoding">GBK</property>
+    
+    <!-- 通用错误响应文件地址 -->
+    <property name="common_error_file">xml/error_resp.xml</property>
+
+	<!-- 服务配置文件地址 -->
+	<property name="service_config_file">config/http_service.xml</property>
+	
+	<!-- 合作商接收URL -->
+	<property name="remote_url">http://122.194.38.9:6666/myApp</property>
+		
+	
+</project>

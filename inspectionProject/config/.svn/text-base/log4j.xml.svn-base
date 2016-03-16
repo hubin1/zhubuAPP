@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="GBK" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %c %m%n" />
+		</layout>
+	</appender>
+	<appender name="DEBUG" class="com.haocom.log.DatedFileAppender">
+		<param name="File" value="log/%yyyy%mm/%dd/debug" />
+		<param name="Append" value="true" />
+		<param name="BufferedIO" value="false" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %c %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="DEBUG" />
+			<param name="LevelMax" value="DEBUG" />
+		</filter>
+	</appender>
+	<appender name="INFO" class="com.haocom.log.DatedFileAppender">
+		<param name="File" value="log/%yyyy%mm/%dd/info" />
+		<param name="Append" value="true" />
+		<param name="BufferedIO" value="false" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %c %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="INFO" />
+			<param name="LevelMax" value="INFO" />
+		</filter>
+	</appender>
+	<appender name="ERROR" class="com.haocom.log.DatedFileAppender">
+		<param name="File" value="log/%yyyy%mm/%dd/error" />
+		<param name="Append" value="true" />
+		<param name="BufferedIO" value="false" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %c %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="ERROR" />
+			<param name="LevelMax" value="ERROR" />
+		</filter>
+	</appender>
+	<appender name="WARN" class="com.haocom.log.DatedFileAppender">
+		<param name="File" value="log/%yyyy%mm/%dd/warn" />
+		<param name="Append" value="true" />
+		<param name="BufferedIO" value="false" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %c %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="WARN" />
+			<param name="LevelMax" value="WARN" />
+		</filter>
+	</appender>
+	<appender name="FATAL" class="com.haocom.log.DatedFileAppender">
+		<param name="File" value="log/%yyyy%mm/%dd/fatal" />
+		<param name="Append" value="true" />
+		<param name="BufferedIO" value="false" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %c %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="FATAL" />
+			<param name="LevelMax" value="FATAL" />
+		</filter>
+	</appender>
+
+
+	<appender name="xml" class="com.haocom.wechat.log.DatedFileAppender">
+		<!-- 事件日志文件存放在log/recv目录下 -->
+		<param name="File" value="log/%yyyy%mm/%dd/xml" />
+		<param name="MaxFileSize" value="20MB" />
+		<param name="MaxBackupIndex" value="100" />
+
+		<!-- 配置日志格式 -->
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %m%n" />
+		</layout>
+	</appender>
+	
+
+	<appender name="orderSuccess" class="com.haocom.log.DatedFileAppender">
+		<param name="File" value="log/%yyyy%mm/%dd/order_success" />
+		<param name="Append" value="true" />
+		<param name="BufferedIO" value="false" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %c %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="orderError" class="com.haocom.log.DatedFileAppender">
+		<param name="File" value="log/%yyyy%mm/%dd/order_error" />
+		<param name="Append" value="true" />
+		<param name="BufferedIO" value="false" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %c %m%n" />
+		</layout>
+	</appender>
+	
+
+
+	<logger name="Xml" additivity="false">
+		<appender-ref ref="xml" />
+	</logger>
+	
+
+	<logger name="OrderSuccess" additivity="false">
+		<appender-ref ref="orderSuccess" />
+	</logger>
+
+	<logger name="OrderError" additivity="false">
+		<appender-ref ref="orderError" />
+	</logger>
+
+
+	<root>
+		<appender-ref ref="DEBUG" />
+		<appender-ref ref="INFO" />
+		<appender-ref ref="ERROR" />
+		<appender-ref ref="WARN" />
+		<appender-ref ref="FATAL" />
+		<appender-ref ref="STDOUT" />
+	</root>
+</log4j:configuration>

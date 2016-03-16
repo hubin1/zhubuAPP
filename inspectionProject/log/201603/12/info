@@ -1,0 +1,660 @@
+2016-03-12 15:11:17,165 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 15:11:17,166 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 15:11:17,433 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 15:11:17,433 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 15:11:17,442 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 15:11:17,442 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 15:11:17,443 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 15:11:17,443 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 15:11:17,443 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 15:11:17,443 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 15:11:17,443 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 15:11:17,443 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 15:11:17,952 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 15:14:23,371 com.org.inspection.server.server.RequestgetUserInfo 位置定位查找user请求：
+2016-03-12 15:14:23,371 com.org.inspection.server.server.RequestgetUserInfo 
+2016-03-12 15:14:23,371 com.org.inspection.server.server.RequestgetUserInfo 请求参数错误：
+2016-03-12 15:14:50,418 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 15:14:50,419 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.949589&&key=userid value=1&&key=longitude value=118.823118&&
+2016-03-12 15:16:10,153 com.org.inspection.server.server.RequestgetUserInfo 位置定位查找user请求：
+2016-03-12 15:16:10,154 com.org.inspection.server.server.RequestgetUserInfo 
+2016-03-12 15:16:10,154 com.org.inspection.server.server.RequestgetUserInfo 请求参数错误：
+2016-03-12 15:16:53,505 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 15:16:53,507 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.949589&&key=userid value=1&&key=longitude value=118.823118&&
+2016-03-12 15:17:14,824 com.org.inspection.server.common.ServerSysManager checkSignincom.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 358,250 milliseconds ago.  The last packet sent successfully to the server was 21,304 milliseconds ago.
+2016-03-12 15:17:38,817 com.org.inspection.server.server.RequestgetUserInfo 位置定位查找user请求：
+2016-03-12 15:17:38,817 com.org.inspection.server.server.RequestgetUserInfo 
+2016-03-12 15:17:38,818 com.org.inspection.server.server.RequestgetUserInfo 请求参数错误：
+2016-03-12 15:20:02,487 com.org.inspection.server.server.RequestgetUserInfo 位置定位查找user请求：
+2016-03-12 15:20:02,489 com.org.inspection.server.server.RequestgetUserInfo 
+2016-03-12 15:20:02,489 com.org.inspection.server.server.RequestgetUserInfo 请求参数错误：
+2016-03-12 15:20:03,659 com.org.inspection.server.server.RequestgetUserInfo 位置定位查找user请求：
+2016-03-12 15:20:03,659 com.org.inspection.server.server.RequestgetUserInfo 
+2016-03-12 15:20:03,660 com.org.inspection.server.server.RequestgetUserInfo 请求参数错误：
+2016-03-12 15:25:30,111 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 15:25:30,112 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.949578&&key=userid value=1&&key=longitude value=118.823134&&
+2016-03-12 15:25:51,422 com.org.inspection.server.common.ServerSysManager checkSignincom.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 874,571 milliseconds ago.  The last packet sent successfully to the server was 21,307 milliseconds ago.
+2016-03-12 15:27:12,458 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 15:27:12,459 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 15:27:12,550 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 15:27:12,550 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 15:27:12,560 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 15:27:12,560 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 15:27:12,560 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 15:27:12,560 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 15:27:12,560 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 15:27:12,561 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 15:27:12,561 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 15:27:12,561 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 15:27:12,701 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 15:27:22,543 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 15:27:22,544 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.949588&&key=userid value=1&&key=longitude value=118.823118&&
+2016-03-12 15:27:28,535 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 15:27:28,535 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.94959&&key=userid value=1&&key=longitude value=118.823117&&
+2016-03-12 15:27:36,812 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 15:27:36,812 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.94959&&key=userid value=1&&key=longitude value=118.823117&&
+2016-03-12 15:31:20,288 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 15:31:20,289 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 15:31:20,372 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 15:31:20,372 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 15:31:20,381 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 15:31:20,381 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 15:31:20,381 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 15:31:20,381 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 15:31:20,381 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 15:31:20,381 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 15:31:20,381 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 15:31:20,382 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 15:31:20,522 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 15:31:40,279 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 15:31:40,280 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.94959&&key=userid value=1&&key=longitude value=118.823117&&
+2016-03-12 15:31:47,108 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 15:31:47,109 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.949584&&key=userid value=1&&key=longitude value=118.823133&&
+2016-03-12 15:32:16,948 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 15:32:16,948 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 15:32:17,043 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 15:32:17,043 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 15:32:17,055 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 15:32:17,055 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 15:32:17,055 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 15:32:17,055 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 15:32:17,055 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 15:32:17,056 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 15:32:17,056 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 15:32:17,056 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 15:32:17,205 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 15:32:22,349 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 15:32:22,349 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.949584&&key=userid value=1&&key=longitude value=118.823133&&
+2016-03-12 15:32:28,039 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 15:32:28,039 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.949584&&key=userid value=1&&key=longitude value=118.823133&&
+2016-03-12 15:32:31,325 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 15:32:31,325 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.949584&&key=userid value=1&&key=longitude value=118.823133&&
+2016-03-12 15:32:36,796 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 15:32:36,797 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.949584&&key=userid value=1&&key=longitude value=118.823133&&
+2016-03-12 15:33:42,237 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 15:33:42,238 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.949584&&key=userid value=1&&key=longitude value=118.823133&&
+2016-03-12 16:06:42,613 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 16:06:42,613 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 16:06:42,702 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 16:06:42,702 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 16:06:42,715 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 16:06:42,715 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 16:06:42,715 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 16:06:42,715 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 16:06:42,715 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 16:06:42,716 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 16:06:42,716 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 16:06:42,717 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 16:06:42,866 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 16:18:12,184 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 16:18:12,185 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.94958&&key=userid value=1&&key=longitude value=118.823131&&
+2016-03-12 16:18:33,508 com.org.inspection.server.common.ServerSysManager checkSignincom.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 711,978 milliseconds ago.  The last packet sent successfully to the server was 21,302 milliseconds ago.
+2016-03-12 16:19:46,865 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 16:19:46,866 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 16:19:46,962 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 16:19:46,963 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 16:19:46,974 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 16:19:46,974 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 16:19:46,974 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 16:19:46,974 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 16:19:46,975 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 16:19:46,975 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 16:19:46,975 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 16:19:46,975 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 16:19:47,124 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 16:21:59,442 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 16:21:59,443 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 16:21:59,537 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 16:21:59,537 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 16:21:59,549 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 16:21:59,549 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 16:21:59,550 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 16:21:59,550 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 16:21:59,550 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 16:21:59,550 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 16:21:59,550 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 16:21:59,550 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 16:21:59,713 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 16:22:07,955 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 16:22:07,956 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.94958&&key=userid value=1&&key=longitude value=118.823131&&
+2016-03-12 16:22:12,038 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 16:22:12,038 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.94958&&key=userid value=1&&key=longitude value=118.823131&&
+2016-03-12 16:22:14,017 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 16:22:14,020 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.94958&&key=userid value=1&&key=longitude value=118.823131&&
+2016-03-12 16:22:15,994 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 16:22:15,994 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.94958&&key=userid value=1&&key=longitude value=118.823131&&
+2016-03-12 16:22:26,142 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 16:22:26,142 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.94958&&key=userid value=1&&key=longitude value=118.823131&&
+2016-03-12 16:22:43,335 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 16:22:43,337 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.949573&&key=userid value=1&&key=longitude value=118.823133&&
+2016-03-12 16:22:46,419 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 16:22:46,419 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.949586&&key=userid value=1&&key=longitude value=118.823118&&
+2016-03-12 16:22:51,358 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 16:22:51,358 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.949586&&key=userid value=1&&key=longitude value=118.823118&&
+2016-03-12 16:22:57,373 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 16:22:57,373 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.949586&&key=userid value=1&&key=longitude value=118.823118&&
+2016-03-12 16:23:00,948 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 16:23:00,949 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.949586&&key=userid value=1&&key=longitude value=118.823118&&
+2016-03-12 16:23:02,968 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 16:23:02,968 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.949586&&key=userid value=1&&key=longitude value=118.823118&&
+2016-03-12 16:25:03,896 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 16:25:03,897 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.94958&&key=userid value=1&&key=longitude value=118.823131&&
+2016-03-12 16:30:31,219 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 16:30:31,220 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.949585&&key=userid value=1&&key=longitude value=118.823132&&
+2016-03-12 16:30:52,528 com.org.inspection.server.common.ServerSysManager checkSignincom.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 481,142 milliseconds ago.  The last packet sent successfully to the server was 21,301 milliseconds ago.
+2016-03-12 16:31:00,734 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 16:31:00,734 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.94958&&key=userid value=1&&key=longitude value=118.823131&&
+2016-03-12 16:31:22,041 com.org.inspection.server.common.ServerSysManager checkSignincom.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 504,645 milliseconds ago.  The last packet sent successfully to the server was 21,304 milliseconds ago.
+2016-03-12 16:32:17,011 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 16:32:17,012 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 16:32:17,160 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 16:32:17,160 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 16:32:17,174 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 16:32:17,174 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 16:32:17,174 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 16:32:17,174 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 16:32:17,175 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 16:32:17,175 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 16:32:17,175 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 16:32:17,175 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 16:32:17,359 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 16:35:55,719 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 16:35:55,720 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 16:39:38,262 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 16:39:38,263 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 16:39:38,376 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 16:39:38,377 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 16:39:38,396 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 16:39:38,396 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 16:39:38,396 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 16:39:38,396 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 16:39:38,396 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 16:39:38,396 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 16:39:38,397 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 16:39:38,397 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 16:39:38,582 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 16:41:38,588 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 16:41:38,588 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 16:41:53,345 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 16:41:53,345 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.94958&&key=userid value=1&&key=longitude value=118.823131&&
+2016-03-12 16:43:08,598 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 16:43:08,599 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 16:44:58,534 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 16:44:58,535 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.94958&&key=userid value=1&&key=longitude value=118.823131&&
+2016-03-12 16:45:13,837 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 16:45:13,837 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 16:45:19,852 com.org.inspection.server.common.ServerSysManager checkSignincom.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 341,850 milliseconds ago.  The last packet sent successfully to the server was 21,305 milliseconds ago.
+2016-03-12 16:45:34,739 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 16:45:34,739 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.94958&&key=userid value=1&&key=longitude value=118.823131&&
+2016-03-12 16:45:35,144 com.org.inspection.server.common.ServerSysManager checkSignincom.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 356,899 milliseconds ago.  The last packet sent successfully to the server was 21,299 milliseconds ago.
+2016-03-12 16:46:48,873 com.org.inspection.server.common.ServerSysManager checkSignincom.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 285,632 milliseconds ago.  The last packet sent successfully to the server was 21,301 milliseconds ago.
+2016-03-12 16:58:52,505 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 16:58:52,506 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 16:58:52,667 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 16:58:52,668 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 16:58:52,683 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 16:58:52,683 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 16:58:52,683 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 16:58:52,683 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 16:58:52,683 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 16:58:52,683 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 16:58:52,683 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 16:58:52,683 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 16:58:52,941 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 16:59:14,128 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 16:59:14,128 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 17:00:56,385 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 17:00:56,386 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 17:00:56,551 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 17:00:56,552 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 17:00:56,569 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 17:00:56,569 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 17:00:56,569 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 17:00:56,570 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 17:00:56,570 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 17:00:56,570 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 17:00:56,570 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 17:00:56,570 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 17:00:56,793 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 17:02:16,639 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 17:02:16,640 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 17:03:29,881 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 17:03:29,881 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 17:05:15,790 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 17:05:15,791 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 17:05:37,101 com.org.inspection.server.common.ServerSysManager checkSignincom.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 281,375 milliseconds ago.  The last packet sent successfully to the server was 21,302 milliseconds ago.
+2016-03-12 17:18:12,766 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 17:18:12,767 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 17:18:12,928 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 17:18:12,929 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 17:18:12,952 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 17:18:12,952 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 17:18:12,952 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 17:18:12,952 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 17:18:12,952 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 17:18:12,952 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 17:18:12,952 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 17:18:12,953 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 17:18:13,212 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 17:18:59,239 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 17:18:59,240 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 17:27:13,783 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 17:27:13,784 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 17:27:13,909 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 17:27:13,910 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 17:27:13,924 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 17:27:13,924 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 17:27:13,924 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 17:27:13,924 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 17:27:13,925 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 17:27:13,925 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 17:27:13,925 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 17:27:13,925 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 17:27:14,097 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 17:27:23,411 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 17:27:23,411 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 17:28:01,346 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 17:28:01,348 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 17:28:01,497 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 17:28:01,497 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 17:28:01,514 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 17:28:01,514 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 17:28:01,514 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 17:28:01,515 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 17:28:01,515 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 17:28:01,515 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 17:28:01,515 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 17:28:01,515 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 17:28:01,732 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 17:29:02,635 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 17:29:02,636 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 17:30:44,934 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 17:30:44,935 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 17:30:45,097 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 17:30:45,146 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 17:30:45,169 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 17:30:45,170 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 17:30:45,170 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 17:30:45,170 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 17:30:45,170 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 17:30:45,170 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 17:30:45,170 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 17:30:45,170 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 17:30:45,389 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 17:31:20,343 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 17:31:20,344 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 17:32:07,907 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 17:32:07,908 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 17:32:08,059 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 17:32:08,059 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 17:32:08,074 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 17:32:08,074 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 17:32:08,075 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 17:32:08,075 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 17:32:08,075 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 17:32:08,075 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 17:32:08,075 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 17:32:08,075 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 17:32:08,297 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 17:35:10,587 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 17:35:10,588 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 17:35:10,739 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 17:35:10,740 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 17:35:10,762 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 17:35:10,762 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 17:35:10,763 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 17:35:10,763 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 17:35:10,763 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 17:35:10,763 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 17:35:10,763 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 17:35:10,765 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 17:35:10,995 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 17:40:41,223 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 17:40:41,225 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 17:40:41,405 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 17:40:41,405 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 17:40:41,430 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 17:40:41,431 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 17:40:41,431 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 17:40:41,431 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 17:40:41,431 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 17:40:41,433 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 17:40:41,433 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 17:40:41,433 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 17:40:41,667 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 17:42:09,447 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 17:42:09,448 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 17:42:09,592 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 17:42:09,592 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 17:42:09,616 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 17:42:09,617 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 17:42:09,617 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 17:42:09,618 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 17:42:09,618 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 17:42:09,618 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 17:42:09,619 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 17:42:09,619 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 17:42:09,856 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 17:54:18,610 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 17:54:18,611 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 17:54:39,941 com.org.inspection.server.common.ServerSysManager checkSignincom.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 751,661 milliseconds ago.  The last packet sent successfully to the server was 21,302 milliseconds ago.
+2016-03-12 17:56:59,540 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 17:56:59,541 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 17:57:20,850 com.org.inspection.server.common.ServerSysManager checkSignincom.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 912,257 milliseconds ago.  The last packet sent successfully to the server was 21,304 milliseconds ago.
+2016-03-12 17:58:21,814 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 17:58:21,815 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 17:58:43,122 com.org.inspection.server.common.ServerSysManager checkSignincom.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 994,268 milliseconds ago.  The last packet sent successfully to the server was 21,303 milliseconds ago.
+2016-03-12 18:00:49,858 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 18:00:49,858 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 18:00:49,991 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 18:00:49,991 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 18:00:50,007 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 18:00:50,007 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 18:00:50,007 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 18:00:50,007 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 18:00:50,007 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 18:00:50,007 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 18:00:50,008 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 18:00:50,008 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 18:00:50,192 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 18:01:10,158 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 18:01:10,158 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 18:02:35,173 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 18:02:35,175 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 18:06:39,479 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 18:06:39,480 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 18:06:39,632 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 18:06:39,633 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 18:06:39,649 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 18:06:39,650 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 18:06:39,650 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 18:06:39,650 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 18:06:39,651 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 18:06:39,651 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 18:06:39,652 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 18:06:39,652 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 18:06:39,876 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 18:06:57,041 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 18:06:57,041 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 18:08:53,066 com.org.inspection.server.server.RequestQuestion 位置定位查找user请求：
+2016-03-12 18:08:53,067 com.org.inspection.server.server.RequestQuestion key=optionname value=android&&key=userid value=1&&key=results value=NoProblem&&key=pointno value=001&&
+2016-03-12 18:08:53,233 com.org.inspection.server.common.ServerSysManager insertintoSigninjava.sql.SQLException: Generated keys not requested. You need to specify Statement.RETURN_GENERATED_KEYS to Statement.executeUpdate() or Connection.prepareStatement().
+2016-03-12 18:09:34,509 com.org.inspection.server.server.RequestQuestion 位置定位查找user请求：
+2016-03-12 18:09:34,510 com.org.inspection.server.server.RequestQuestion key=picpath value=D://savepath//201603121807176.png&&key=optionname value=android&&key=userid value=1&&key=results value=NoProblem&&key=pointno value=001&&
+2016-03-12 18:09:34,568 com.org.inspection.server.common.ServerSysManager insertintoSigninjava.sql.SQLException: Generated keys not requested. You need to specify Statement.RETURN_GENERATED_KEYS to Statement.executeUpdate() or Connection.prepareStatement().
+2016-03-12 18:09:38,939 com.org.inspection.server.server.RequestQuestion 位置定位查找user请求：
+2016-03-12 18:09:38,939 com.org.inspection.server.server.RequestQuestion key=picpath value=D://savepath//201603121807176.png&&key=optionname value=android&&key=userid value=1&&key=results value=NoProblem&&key=pointno value=001&&
+2016-03-12 18:09:39,001 com.org.inspection.server.common.ServerSysManager insertintoSigninjava.sql.SQLException: Generated keys not requested. You need to specify Statement.RETURN_GENERATED_KEYS to Statement.executeUpdate() or Connection.prepareStatement().
+2016-03-12 18:10:30,087 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 18:10:30,088 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 18:10:30,213 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 18:10:30,213 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 18:10:30,228 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 18:10:30,228 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 18:10:30,228 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 18:10:30,229 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 18:10:30,229 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 18:10:30,229 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 18:10:30,230 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 18:10:30,230 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 18:10:30,421 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 18:11:25,871 com.org.inspection.server.server.RequestQuestion 位置定位查找user请求：
+2016-03-12 18:11:25,871 com.org.inspection.server.server.RequestQuestion key=picpath value=D:/savepath/201603121807176.png&&key=optionname value=android&&key=userid value=1&&key=results value=NoProblem&&key=pointno value=001&&
+2016-03-12 18:11:25,955 com.org.inspection.server.common.ServerSysManager insertintoSigninjava.sql.SQLException: Generated keys not requested. You need to specify Statement.RETURN_GENERATED_KEYS to Statement.executeUpdate() or Connection.prepareStatement().
+2016-03-12 18:12:14,836 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 18:12:14,837 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 18:12:14,969 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 18:12:14,969 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 18:12:14,986 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 18:12:14,986 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 18:12:14,986 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 18:12:14,987 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 18:12:14,987 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 18:12:14,987 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 18:12:14,987 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 18:12:14,987 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 18:12:15,213 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 18:12:20,343 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 18:12:20,343 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 18:13:52,486 com.org.inspection.server.server.RequestQuestion 位置定位查找user请求：
+2016-03-12 18:13:52,487 com.org.inspection.server.server.RequestQuestion key=picpath value=D:/savepath/201603121812357.png&&key=optionname value=android&&key=userid value=1&&key=results value=No problem&&key=pointno value=001&&
+2016-03-12 18:13:52,559 com.org.inspection.server.common.ServerSysManager insertintoSigninjava.sql.SQLException: Generated keys not requested. You need to specify Statement.RETURN_GENERATED_KEYS to Statement.executeUpdate() or Connection.prepareStatement().
+2016-03-12 18:17:17,933 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 18:17:17,934 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 18:17:18,101 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 18:17:18,101 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 18:17:18,119 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 18:17:18,119 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 18:17:18,120 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 18:17:18,120 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 18:17:18,120 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 18:17:18,120 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 18:17:18,120 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 18:17:18,121 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 18:17:18,390 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 18:17:35,617 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 18:17:35,618 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 18:18:49,971 com.org.inspection.server.server.RequestQuestion 位置定位查找user请求：
+2016-03-12 18:18:49,972 com.org.inspection.server.server.RequestQuestion key=picpath value=D:/savepath/201603121817518.png&&key=optionname value=android&&key=userid value=1&&key=results value=No problem&&key=pointno value=001&&
+2016-03-12 18:18:50,032 com.org.inspection.server.common.ServerSysManager insertintoSigninjava.sql.SQLException: Before start of result set
+2016-03-12 18:26:27,869 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 18:26:27,870 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 18:26:28,048 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 18:26:28,048 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 18:26:28,075 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 18:26:28,075 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 18:26:28,076 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 18:26:28,076 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 18:26:28,076 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 18:26:28,076 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 18:26:28,077 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 18:26:28,078 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 18:26:28,411 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 18:26:33,222 com.org.inspection.server.server.RequestQuestion 位置定位查找user请求：
+2016-03-12 18:26:33,223 com.org.inspection.server.server.RequestQuestion key=picpath value=D:/savepath/201603121817518.png&&key=optionname value=android&&key=userid value=1&&key=results value=No problem&&key=pointno value=001&&
+2016-03-12 18:27:07,799 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 18:27:07,799 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 18:27:27,379 com.org.inspection.server.server.RequestQuestion 位置定位查找user请求：
+2016-03-12 18:27:27,380 com.org.inspection.server.server.RequestQuestion key=picpath value=D:/savepath/201603121827269.png&&key=optionname value=android&&key=userid value=1&&key=results value=Noproblem&&key=pointno value=001&&
+2016-03-12 18:34:54,917 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 18:34:54,917 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 18:34:55,043 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 18:34:55,043 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 18:34:55,057 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 18:34:55,057 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 18:34:55,058 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 18:34:55,058 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 18:34:55,058 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 18:34:55,058 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 18:34:55,058 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 18:34:55,058 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 18:34:55,241 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 18:37:15,447 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 18:37:15,447 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 18:38:35,965 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 18:38:35,965 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 18:39:38,315 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 18:39:38,316 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 18:39:59,622 com.org.inspection.server.common.ServerSysManager checkSignincom.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 305,284 milliseconds ago.  The last packet sent successfully to the server was 21,301 milliseconds ago.
+2016-03-12 18:40:58,207 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 18:40:58,208 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 18:40:58,331 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 18:40:58,331 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 18:40:58,341 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 18:40:58,341 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 18:40:58,341 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 18:40:58,341 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 18:40:58,341 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 18:40:58,341 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 18:40:58,341 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 18:40:58,341 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 18:40:58,544 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 18:43:08,330 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 18:43:08,331 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 18:45:03,375 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 18:45:03,377 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 18:45:24,687 com.org.inspection.server.common.ServerSysManager checkSignincom.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 267,352 milliseconds ago.  The last packet sent successfully to the server was 21,301 milliseconds ago.
+2016-03-12 18:49:08,779 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 18:49:08,780 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 18:49:08,880 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 18:49:08,880 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 18:49:08,893 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 18:49:08,893 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 18:49:08,894 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 18:49:08,894 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 18:49:08,894 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 18:49:08,894 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 18:49:08,894 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 18:49:08,894 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 18:49:09,049 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 18:49:25,204 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 18:49:25,204 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 18:50:08,235 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 18:50:08,236 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 18:50:58,384 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 18:50:58,384 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 18:54:02,216 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 18:54:02,217 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 18:54:23,528 com.org.inspection.server.common.ServerSysManager checkSignincom.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 315,019 milliseconds ago.  The last packet sent successfully to the server was 21,299 milliseconds ago.
+2016-03-12 18:54:55,617 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 18:54:55,619 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 18:55:10,287 com.org.inspection.server.server.RequestQuestion 位置定位查找user请求：
+2016-03-12 18:55:10,287 com.org.inspection.server.server.RequestQuestion key=picpath value=D:/savepath/2016031218551022.png,D:/savepath/2016031218551023.png&&key=optionname value=android&&key=userid value=1&&key=results value=NoProblem&&key=pointno value=001&&
+2016-03-12 18:55:16,919 com.org.inspection.server.common.ServerSysManager checkSignincom.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 368,158 milliseconds ago.  The last packet sent successfully to the server was 21,293 milliseconds ago.
+2016-03-12 18:55:34,785 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 18:55:34,786 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 18:55:34,901 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 18:55:34,902 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 18:55:34,913 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 18:55:34,913 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 18:55:34,913 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 18:55:34,913 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 18:55:34,914 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 18:55:34,914 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 18:55:34,914 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 18:55:34,914 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 18:55:35,068 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 18:55:51,070 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 18:55:51,070 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=4.9E-324&&key=userid value=1&&key=longitude value=4.9E-324&&
+2016-03-12 18:57:32,965 com.org.inspection.server.server.RequestQuestion 位置定位查找user请求：
+2016-03-12 18:57:32,966 com.org.inspection.server.server.RequestQuestion key=picpath value=D:/savepath/2016031218573224.png,D:/savepath/2016031218573225.png&&key=optionname value=android&&key=userid value=1&&key=results value=NoProblem&&key=pointno value=001&&
+2016-03-12 18:58:30,156 com.org.inspection.server.server.RequestQuestion 位置定位查找user请求：
+2016-03-12 18:58:30,157 com.org.inspection.server.server.RequestQuestion key=picpath value=D:/savepath/2016031218573224.png,D:/savepath/2016031218573225.png,D:/savepath/2016031218582926.png,D:/savepath/2016031218583027.png&&key=optionname value=android&&key=userid value=1&&key=results value=NoProblem&&key=pointno value=001&&
+2016-03-12 19:00:21,411 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 19:00:21,411 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 19:00:21,496 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 19:00:21,496 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 19:00:21,507 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 19:00:21,507 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 19:00:21,507 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 19:00:21,507 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 19:00:21,507 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 19:00:21,507 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 19:00:21,507 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 19:00:21,507 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 19:00:21,646 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 19:00:54,542 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 19:00:54,543 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.949588&&key=userid value=1&&key=longitude value=118.82313&&
+2016-03-12 19:05:15,606 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 19:05:15,607 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 19:05:15,695 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 19:05:15,695 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 19:05:15,704 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 19:05:15,704 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 19:05:15,704 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 19:05:15,704 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 19:05:15,705 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 19:05:15,705 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 19:05:15,705 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 19:05:15,705 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 19:05:15,840 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 19:05:56,206 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 19:05:56,207 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.949595&&key=userid value=1&&key=longitude value=118.823117&&
+2016-03-12 19:07:30,719 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 19:07:30,720 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.949595&&key=userid value=1&&key=longitude value=118.823117&&
+2016-03-12 19:07:58,651 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 19:07:58,651 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.949585&&key=userid value=1&&key=longitude value=118.823132&&
+2016-03-12 19:09:07,005 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 19:09:07,005 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.949585&&key=userid value=1&&key=longitude value=118.823132&&
+2016-03-12 19:09:57,468 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 19:09:57,469 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 19:09:57,588 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 19:09:57,588 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 19:09:57,600 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 19:09:57,600 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 19:09:57,600 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 19:09:57,600 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 19:09:57,600 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 19:09:57,601 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 19:09:57,601 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 19:09:57,601 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 19:09:57,775 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 19:10:59,839 com.org.inspection.http_inferface.Service 接口开始启动
+2016-03-12 19:10:59,840 com.org.inspection.http_inferface.Service 部署的端口是9022
+2016-03-12 19:10:59,917 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestgetUserInfo
+2016-03-12 19:10:59,917 com.org.inspection.http_inferface.Service URL:/findUserInfo
+2016-03-12 19:10:59,927 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestSignin
+2016-03-12 19:10:59,927 com.org.inspection.http_inferface.Service URL:/signin
+2016-03-12 19:10:59,927 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQuestion
+2016-03-12 19:10:59,927 com.org.inspection.http_inferface.Service URL:/resultsubmit
+2016-03-12 19:10:59,927 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestImageSave
+2016-03-12 19:10:59,927 com.org.inspection.http_inferface.Service URL:/uploadImage
+2016-03-12 19:10:59,927 com.org.inspection.http_inferface.Service 加载处理器:class com.org.inspection.server.server.RequestQrcodeImage
+2016-03-12 19:10:59,928 com.org.inspection.http_inferface.Service URL:/sweepcard
+2016-03-12 19:11:00,045 com.org.inspection.http_inferface.Service 接口启动成功
+2016-03-12 19:11:23,980 com.org.inspection.server.server.RequestSignin 签到请求：
+2016-03-12 19:11:23,981 com.org.inspection.server.server.RequestSignin key=stats value=0&&key=latitude value=31.949588&&key=userid value=1&&key=longitude value=118.82313&&
+2016-03-12 19:11:30,552 com.org.inspection.server.server.RequestQrcodeImage 二维码请求：
+2016-03-12 19:11:30,555 com.org.inspection.server.server.RequestQrcodeImage key=pointid value=1&&key=userid value=1&&

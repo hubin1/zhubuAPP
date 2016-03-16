@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="GB18030"?>
+	<!-- 本XML为各服务XML的示范样例 -->
+<service_info>
+	<!-- 本地服务部分 -->
+	<local>
+		<!-- 服务名称 -->
+		<name>接口</name>
+
+		<!-- Http服务部署的端口 -->
+		<port>9022</port>
+
+		<!-- 处理器信息，必须继承com.cplatform.http_interface.BaseRequestHandler -->
+		<handler_info>
+			<!-- 处理类 -->
+			<class>com.org.inspection.server.server.RequestgetUserInfo</class>
+			<!-- 处理的URL -->
+			<url>/findUserInfo</url>
+		</handler_info>
+		<handler_info>
+			<!-- 处理类 -->
+			<class>com.org.inspection.server.server.RequestSignin</class>
+			<!-- 处理的URL -->
+			<url>/signin</url>
+		</handler_info>
+		<handler_info>
+			<!-- 处理类 -->
+			<class>com.org.inspection.server.server.RequestQuestion</class>
+			<!-- 处理的URL -->
+			<url>/resultsubmit</url>
+		</handler_info>
+		<handler_info>
+			<!-- 处理类 -->
+			<class>com.org.inspection.server.server.RequestImageSave</class>
+			<!-- 处理的URL -->
+			<url>/uploadImage</url>
+		</handler_info>
+		<handler_info>
+			<!-- 处理类 -->
+			<class>com.org.inspection.server.server.RequestQrcodeImage</class>
+			<!-- 处理的URL -->
+			<url>/sweepcard</url>
+		</handler_info>
+	</local>
+</service_info>
